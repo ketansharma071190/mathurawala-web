@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Gallery | Mathurawala — From our kitchen, and our guests</title>
+<meta name="description" content="Real photos from the Mathurawala kitchen in Baner, Pune, and from the people who eat here. Follow us on Instagram @mathurawalasweet and tag your plate." />
+<meta name="theme-color" content="#F4E9CE" />
+<meta name="robots" content="noindex" />
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,800;9..144,900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+ --cream:#F6EACB; --cream2:#FBF3DF; --paper:#FEFBF3; --ink:#16273C; --ink2:#33485F;
+ --navy:#10243C; --navy-d:#0B1B2E; --teal:#15837E; --teal2:#1EA39A; --gold:#C98A1E; --gold2:#E0A52E; --maroon:#8A2D2A;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,sans-serif;color:var(--ink);background:var(--cream);-webkit-font-smoothing:antialiased;line-height:1.6}
+h1,h2,h3,.serif{font-family:Fraunces,Georgia,serif}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1200px;margin:0 auto;padding:0 28px}
+.kicker{font-size:13px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:var(--gold)}
+.kicker.t{color:var(--teal)}
+.btn{display:inline-block;padding:14px 26px;border-radius:40px;font-weight:600;font-size:15px;transition:.2s;border:1.6px solid transparent}
+.btn-gold{background:var(--gold2);color:var(--navy)}
+.btn-gold:hover{background:var(--gold)}
+.btn-out{border-color:var(--navy);color:var(--navy)}
+.btn-out:hover{background:var(--navy);color:var(--cream2)}
+.btn-light{border-color:rgba(255,255,255,.5);color:#fff}
+.btn-light:hover{border-color:var(--gold2);color:var(--gold2)}
+
+header{position:sticky;top:0;z-index:60;background:rgba(246,234,203,.92);backdrop-filter:blur(8px);border-bottom:1px solid rgba(21,131,126,.18)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:76px;gap:20px}
+.brand img{height:46px;width:auto}
+.menu{display:flex;gap:28px}
+.menu a{color:var(--ink);font-weight:600;font-size:15px}
+.menu a:hover{color:var(--teal)}
+.nav .btn{padding:11px 20px;font-size:14px}
+@media(max-width:860px){.menu{display:none}}
+
+.phead{text-align:center;padding:64px 0 10px}
+.phead h1{font-size:clamp(34px,5vw,56px);font-weight:900;line-height:1.06;color:var(--navy)}
+.phead .deva{font-family:Fraunces;font-style:italic;color:var(--teal);font-size:20px;margin-bottom:8px}
+.phead p{max-width:680px;margin:16px auto 0;color:var(--ink2);font-size:17px}
+
+.ig{max-width:760px;margin:36px auto 8px;background:var(--paper);border:1px solid rgba(16,36,60,.08);border-radius:22px;box-shadow:0 14px 34px rgba(16,36,60,.08);padding:26px 28px;display:flex;align-items:center;gap:22px;flex-wrap:wrap;justify-content:center}
+.ig .av{width:74px;height:74px;border-radius:50%;background:var(--navy);display:flex;align-items:center;justify-content:center;flex:none;border:3px solid var(--gold2)}
+.ig .av img{width:52px;height:auto;filter:brightness(0) invert(.94)}
+.ig .who{flex:1;min-width:200px}
+.ig .who .h{font-family:Fraunces;font-size:22px;font-weight:800;color:var(--navy)}
+.ig .who .s{font-size:14px;color:var(--ink2);margin-top:2px}
+.ig .who .tag{font-size:13px;color:var(--teal);font-weight:600;margin-top:6px}
+
+.section{padding:46px 0}
+.sec-head{text-align:center;max-width:720px;margin:0 auto 30px}
+.sec-head h2{font-size:clamp(26px,3.4vw,38px);font-weight:800;color:var(--navy);margin-top:8px;line-height:1.12}
+.sec-head p{color:var(--ink2);margin-top:10px}
+
+.masonry{columns:4;column-gap:16px}
+.masonry .ph{break-inside:avoid;margin-bottom:16px;border-radius:16px;overflow:hidden;box-shadow:0 12px 28px rgba(16,36,60,.1);position:relative;display:block}
+.masonry .ph img{width:100%;transition:.5s}
+.masonry .ph:hover img{transform:scale(1.05)}
+.masonry .ph .ig-badge{position:absolute;top:10px;right:10px;width:30px;height:30px;border-radius:8px;background:rgba(11,27,46,.55);display:flex;align-items:center;justify-content:center;opacity:0;transition:.25s}
+.masonry .ph:hover .ig-badge{opacity:1}
+.masonry .ph .ig-badge svg{width:17px;height:17px;stroke:#fff}
+@media(max-width:980px){.masonry{columns:3}}
+@media(max-width:680px){.masonry{columns:2}}
+
+.reviews{background:var(--cream2)}
+.rev-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;max-width:980px;margin:0 auto}
+.rev{background:var(--paper);border-radius:18px;padding:26px 28px;box-shadow:0 12px 30px rgba(16,36,60,.07)}
+.rev .stars{color:var(--gold2);font-size:15px;letter-spacing:2px}
+.rev .q{font-family:Fraunces;font-size:18px;color:var(--ink);margin:10px 0 12px;line-height:1.45}
+.rev .by{font-size:13.5px;color:var(--ink2);font-weight:600}
+.rev .by span{color:var(--teal)}
+.rev-agg{text-align:center;margin:26px auto 0}
+.rev-agg .big{font-family:Fraunces;font-size:34px;font-weight:900;color:var(--navy)}
+.rev-agg .lbl{font-size:14px;color:var(--ink2)}
+@media(max-width:680px){.rev-grid{grid-template-columns:1fr}}
+
+.cta-band{position:relative;background:var(--navy);color:var(--cream2);text-align:center;overflow:hidden}
+.cta-band .wrap{padding:70px 28px 78px;position:relative}
+.cta-band h2{color:#fff;font-size:clamp(25px,3.2vw,38px);font-weight:800}
+.cta-band p{color:#aebccf;margin:14px auto 24px;max-width:560px}
+.cta-band .row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+
+footer{position:relative;background:var(--navy-d);color:#9fb0c4;padding:50px 0 36px;text-align:center}
+footer .logo{height:54px;width:auto;margin:0 auto 16px;filter:brightness(0) invert(.92)}
+footer .links{margin:8px 0 14px;display:flex;gap:22px;justify-content:center;flex-wrap:wrap}
+footer .links a{font-weight:600;font-size:14px;color:#cdd8e6}
+footer .links a:hover{color:var(--gold2)}
+footer .social{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin:6px 0 4px}
+footer .social a{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:#cdd8e6;border:1px solid rgba(255,255,255,.18);padding:9px 17px;border-radius:30px;transition:.2s}
+footer .social a:hover{border-color:var(--gold2);color:var(--gold2)}
+footer .social svg{width:16px;height:16px;flex:none}
+footer .fine{font-size:12.5px;color:#69809a;margin-top:14px}
+</style>
+</head>
+<body>
+
+<header>
+ <div class="wrap nav">
+  <a class="brand" href="./index.html" aria-label="Mathurawala"><img src="./assets/new/logo-clean.png" alt="Mathurawala" /></a>
+  <nav class="menu">
+   <a href="./index.html#food">Food</a>
+   <a href="./index.html#meals">Meals</a>
+   <a href="./index.html#gifting">Gifting</a>
+   <a href="./gallery.html">Gallery</a>
+   <a href="./braj-kitchen/index.html">Braj Kitchen</a>
+   <a href="./index.html#visit">Visit</a>
+  </nav>
+  <a class="btn btn-gold" href="https://www.instagram.com/mathurawalasweet/" target="_blank" rel="noopener">Follow us</a>
+ </div>
+</header>
+
+<section class="phead"><div class="wrap">
+ <div class="deva">राधे राधे 🦚</div>
+ <div class="kicker t">From our kitchen, and our guests</div>
+ <h1>What asli swad<br>actually looks like.</h1>
+ <p>Real plates from our Baner kitchen, shot fresh, and the food our guests keep coming back for. Follow along on Instagram, and tag us when Mathura finds you in Pune.</p>
+</div></section>
+
+<div class="wrap">
+ <div class="ig">
+  <div class="av"><img src="./assets/new/logo-clean.png" alt="Mathurawala"></div>
+  <div class="who">
+   <div class="h">@mathurawalasweet</div>
+   <div class="s">Mathura ka asli swad, ab Pune mein. Made live, every single day.</div>
+   <div class="tag">Tag #Mathurawala and we will share your plate</div>
+  </div>
+  <a class="btn btn-gold" href="https://www.instagram.com/mathurawalasweet/" target="_blank" rel="noopener">Follow on Instagram</a>
+ </div>
+</div>
+
+<section class="section"><div class="wrap">
+ <div class="masonry">
+  <a class="ph" href="https://www.instagram.com/mathurawalasweet/" target="_blank" rel="noopener"><img src="./assets/new/kachori-sabji.jpg" alt="Kachori Sabji"><span class="ig-badge"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.5" cy="6.5" r="1.2" fill="#fff" stroke="none"/></svg></span></a>
+  <a class="ph" href="https://www.instagram.com/mathurawalasweet/" target="_blank" rel="noopener"><img src="./assets/new-kulhad-lassi.jpg" alt="Kulhad Lassi"><span class="ig-badge"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.5" cy="6.5" r="1.2" fill="#fff" stroke="none"/></svg></span></a>
+  <a class="ph" href="https://www.instagram.com/mathurawalasweet/" target="_blank" rel="noopener"><img src="./assets/latest-chole-bhature.jpg" alt="Chole Bhature"><span class="ig-badge"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.5" cy="6.5" r="1.2" fill="#fff" stroke="none"/></svg></span></a>
+  <a class="ph" href="https://www.instagram.com/mathurawalasweet/" target="_blank" rel="noopener"><img src="./assets/new-kesar-rabdi.jpg" alt="Kesar Rabdi"><span class="ig-badge"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.5" cy="6.5" r="1.2" fill="#fff" stroke="none"/></svg></span></a>
+  <a class="ph" href="https://www.instagram.com/mathurawalasweet/" target="_blank" rel="noopener"><img src="./assets/new-aloo-tikki.jpg" alt="Aloo Tikki Chaat"><span class="ig-badge"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.5" cy="6.5" r="1.2" fill="#fff" stroke="none"/></svg></span></a>
+  <a class="ph" href="https://www.instagram.com/mathurawalasweet/" target="_blank" rel="noopener"><img src="./assets/new-bedai-sabji.jpg" alt="Bedai Sabji"><span class="ig-badge"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.5" cy="6.5" r="1.2" fill="#fff" stroke="none"/></svg></span></a>
+  <a class="ph" href="https://www.instagram.com/mathurawalasweet/" target="_blank" rel="noopener"><img src="./assets/latest-jalebi.jpg" alt="Jalebi"><span class="ig-badge"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.5" cy="6.5" r="1.2" fill="#fff" stroke="none"/></svg></span></a>
+  <a class="ph" href="https://www.instagram.com/mathurawalasweet/" target="_blank" rel="noopener"><img src="./assets/premium-box-feather.jpg" alt="Festive sweet box"><span class="ig-badge"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.5" cy="6.5" r="1.2" fill="#fff" stroke="none"/></svg></span></a>
+  <a class="ph" href="https://www.instagram.com/mathurawalasweet/" target="_blank" rel="noopener"><img src="./assets/latest-dahi-bhalla-papdi.jpg" alt="Dahi Bhalla Papdi"><span class="ig-badge"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.5" cy="6.5" r="1.2" fill="#fff" stroke="none"/></svg></span></a>
+  <a class="ph" href="https://www.instagram.com/mathurawalasweet/" target="_blank" rel="noopener"><img src="./assets/real-diwali-hamper.jpg" alt="Diwali hamper"><span class="ig-badge"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.5" cy="6.5" r="1.2" fill="#fff" stroke="none"/></svg></span></a>
+  <a class="ph" href="https://www.instagram.com/mathurawalasweet/" target="_blank" rel="noopener"><img src="./assets/latest-rasmalai.jpg" alt="Rasmalai"><span class="ig-badge"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.5" cy="6.5" r="1.2" fill="#fff" stroke="none"/></svg></span></a>
+  <a class="ph" href="https://www.instagram.com/mathurawalasweet/" target="_blank" rel="noopener"><img src="./assets/premium-dryfruit-box.jpg" alt="Dry-fruit gift box"><span class="ig-badge"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.5" cy="6.5" r="1.2" fill="#fff" stroke="none"/></svg></span></a>
+ </div>
+</div></section>
+
+<section class="section reviews"><div class="wrap">
+ <div class="sec-head">
+  <div class="kicker">In their own words</div>
+  <h2>The reviews that matter most to us.</h2>
+  <p>Real words from our guests on Google. The ones who were missing home, and found it.</p>
+ </div>
+ <div class="rev-grid">
+  <div class="rev"><div class="stars">★★★★★</div><div class="q">"If you're feeling homesick in Pune, this place is truly a blessing."</div><div class="by"><span>Anushka Sharma</span> · Google review</div></div>
+  <div class="rev"><div class="stars">★★★★★</div><div class="q">"Authentic Mathura food with the same original, traditional taste. It takes you back to your hometown."</div><div class="by"><span>Shekhar Srivastava</span> · Google review</div></div>
+  <div class="rev"><div class="stars">★★★★★</div><div class="q">"Was missing that Agra taste of chaat, glad I finally found it here. Barule and all those unique things I don't think are available anywhere else in Pune."</div><div class="by"><span>Akrati Gangwar</span> · Google review</div></div>
+  <div class="rev"><div class="stars">★★★★★</div><div class="q">"Aloo Tikki Chaat, best I've ever eaten. The Rasmalai was outstanding, the best I've had."</div><div class="by"><span>Saurabh Suratkar</span> · Google review</div></div>
+ </div>
+ <div class="rev-agg">
+  <div class="big">4.2 ★ · 700+ reviews</div>
+  <div class="lbl">on Google, and counting</div>
+  <p style="margin-top:16px"><a class="btn btn-out" href="https://www.google.com/maps/search/?api=1&query=Mathurawala+Baner+Pune" target="_blank" rel="noopener">Read all reviews</a></p>
+ </div>
+</div></section>
+
+<section class="cta-band"><div class="wrap">
+ <h2>Seen Mathura on your plate? Show us.</h2>
+ <p>Tag <b>@mathurawalasweet</b> and <b>#Mathurawala</b> in your photos and reels. We share our favourites here and on our pages, so the whole world sees Bharat's original food.</p>
+ <div class="row">
+  <a class="btn btn-gold" href="https://www.instagram.com/mathurawalasweet/" target="_blank" rel="noopener">Follow on Instagram</a>
+  <a class="btn btn-light" href="https://www.zomato.com/pune/mathurawala-baner" target="_blank" rel="noopener">Order on Zomato</a>
+ </div>
+</div></section>
+
+<footer>
+ <div class="wrap">
+  <img class="logo" src="./assets/new/logo-clean.png" alt="Mathurawala" />
+  <div class="links">
+   <a href="./index.html#food">Food</a><a href="./index.html#meals">Meals</a><a href="./index.html#gifting">Gifting</a><a href="./gallery.html">Gallery</a><a href="./braj-kitchen/index.html">Braj Kitchen</a><a href="./index.html#visit">Visit</a>
+  </div>
+  <div class="social">
+   <a href="https://www.instagram.com/mathurawalasweet/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg>Instagram</a>
+   <a href="https://www.zomato.com/pune/mathurawala-baner" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 11l8.5-1.5L20 11M5 11v8h14v-8M9 19v-5h6v5"/></svg>Zomato</a>
+   <a href="https://www.google.com/maps/search/?api=1&query=Mathurawala+Baner+Pune" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s7-6.5 7-12A7 7 0 0 0 5 10c0 5.5 7 12 7 12z"/><circle cx="12" cy="10" r="2.6"/></svg>Google reviews</a>
+  </div>
+  <div class="fine">Bharat's original food, from the world's oldest living kitchen.<br>Baner, Pune · Pure vegetarian · Made live, no preservatives · Radhe Radhe 🙏</div>
+ </div>
+</footer>
+
+</body>
+</html>
