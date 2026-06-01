@@ -9,6 +9,17 @@
 <meta property="og:title" content="Mathurawala | Bharat's Original Food" />
 <meta property="og:description" content="The food of Krishna's Mathura, made live in Pune. Asli, shuddh, fresh every day." />
 <meta name="robots" content="noindex" />
+<link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="180x180" href="./assets/favicon.png">
+<link rel="apple-touch-icon" href="./assets/favicon.png">
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://ketansharma071190.github.io/mathurawala-web/" />
+<meta property="og:image" content="https://ketansharma071190.github.io/mathurawala-web/assets/og-mathurawala.jpg" />
+<meta property="og:image:width" content="1200" /><meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Mathurawala | Bharat's Original Food" />
+<meta name="twitter:description" content="The food of Krishna's Mathura, made live in Pune. Asli, shuddh, fresh every day." />
+<meta name="twitter:image" content="https://ketansharma071190.github.io/mathurawala-web/assets/og-mathurawala.jpg" />
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,800;9..144,900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script type="application/ld+json">
@@ -43,6 +54,15 @@ header{position:sticky;top:0;z-index:60;background:rgba(246,234,203,.92);backdro
 .menu a{color:var(--ink);font-weight:600;font-size:15px}
 .menu a:hover{color:var(--teal)}
 .nav .btn{padding:11px 20px;font-size:14px}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;margin:-8px}
+.hamburger span{width:24px;height:2.5px;background:var(--ink);border-radius:2px;transition:.25s}
+.menu-order{display:none}
+#navtog:checked ~ .hamburger span:nth-child(1){transform:translateY(7.5px) rotate(45deg)}
+#navtog:checked ~ .hamburger span:nth-child(2){opacity:0}
+#navtog:checked ~ .hamburger span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg)}
+.fab{position:fixed;right:18px;bottom:18px;z-index:80;width:56px;height:56px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(0,0,0,.28)}
+.fab:hover{transform:scale(1.06)}
+.fab svg{width:30px;height:30px;fill:#fff}
 
 /* hero */
 .hero{position:relative;overflow:hidden;background:linear-gradient(180deg,var(--cream2),var(--cream))}
@@ -143,9 +163,15 @@ footer .social{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margi
 footer .social a{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:#cdd8e6;border:1px solid rgba(255,255,255,.18);padding:9px 17px;border-radius:30px;transition:.2s}
 footer .social a:hover{border-color:var(--gold2);color:var(--gold2)}
 footer .social svg{width:16px;height:16px;flex:none}
+.visit .map{margin-top:32px;border-radius:18px;overflow:hidden;box-shadow:0 12px 30px rgba(16,36,60,.1)}
+.visit .map iframe{width:100%;height:320px;border:0;display:block;filter:saturate(.92)}
 
 @media(max-width:880px){
- .menu,.nav .btn{display:none}
+ .menu{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:flex-start;background:var(--cream2);padding:16px 28px 24px;gap:16px;border-bottom:1px solid rgba(21,131,126,.2);box-shadow:0 16px 30px rgba(16,36,60,.14)}
+ #navtog:checked ~ .menu{display:flex}
+ .hamburger{display:flex}
+ .nav-order{display:none}
+ .menu-order{display:inline-block;margin-top:6px}
  .hero .wrap{grid-template-columns:1fr;gap:34px;padding-bottom:60px}
  .pillar-grid,.hub-grid{grid-template-columns:repeat(2,1fr)}
  .dish-grid{grid-template-columns:1fr 1fr}
@@ -159,7 +185,8 @@ footer .social svg{width:16px;height:16px;flex:none}
 
 <header>
  <div class="wrap nav">
-  <a class="brand" href="#top" aria-label="Mathurawala"><img src="./assets/new/logo-clean.png" alt="Mathurawala" /></a>
+  <a class="brand" href="#top" aria-label="Mathurawala"><img loading="lazy" decoding="async" src="./assets/new/logo-clean.png" alt="Mathurawala" /></a>
+  <input type="checkbox" id="navtog" hidden>
   <nav class="menu">
    <a href="#food">Food</a>
    <a href="#meals">Meals</a>
@@ -168,14 +195,16 @@ footer .social svg{width:16px;height:16px;flex:none}
    <a href="./braj-kitchen/index.html">Braj Kitchen</a>
    <a href="#franchise">Franchise</a>
    <a href="#visit">Visit</a>
+   <a class="btn btn-gold menu-order" href="https://wa.me/919356326855?text=Radhe%20Radhe%20Mathurawala%2C%20I%20want%20to%20order%20for%20pickup.">Order on WhatsApp</a>
   </nav>
-  <a class="btn btn-gold" href="https://wa.me/919356326855?text=Radhe%20Radhe%20Mathurawala%2C%20I%20want%20to%20order%20for%20pickup.">Order on WhatsApp</a>
+  <a class="btn btn-gold nav-order" href="https://wa.me/919356326855?text=Radhe%20Radhe%20Mathurawala%2C%20I%20want%20to%20order%20for%20pickup.">Order on WhatsApp</a>
+  <label for="navtog" class="hamburger" aria-label="Open menu"><span></span><span></span><span></span></label>
  </div>
 </header>
 
 <a id="top"></a>
 <section class="hero">
- <img class="sil" src="./assets/new/temple-silhouette.png" alt="" aria-hidden="true" />
+ <img loading="lazy" decoding="async" class="sil" src="./assets/new/temple-silhouette.png" alt="" aria-hidden="true" />
  <div class="wrap">
   <div>
    <div class="deva">राधे राधे 🦚</div>
@@ -188,7 +217,7 @@ footer .social svg{width:16px;height:16px;flex:none}
    </div>
    <div class="meta">Shop 4, Shivam Complex, Baner, Pune  ·  Since 2023  ·  Pure vegetarian</div>
   </div>
-  <div class="shot"><img src="./assets/new/kachori-sabji.jpg" alt="Mathura ki Kachori Sabji" /></div>
+  <div class="shot"><img loading="lazy" decoding="async" src="./assets/new/kachori-sabji.jpg" alt="Mathura ki Kachori Sabji" /></div>
  </div>
 </section>
 
@@ -211,23 +240,23 @@ footer .social svg{width:16px;height:16px;flex:none}
   <h2>Mathura's signatures, made live.</h2>
   <p>Fried fresh, simmered slow, served the moment it is ready.</p></div>
  <div class="dish-grid">
-  <div class="dish"><div class="ph"><img src="./assets/new-bedai-sabji.jpg" alt="Bedai Sabji"></div>
+  <div class="dish"><div class="ph"><img loading="lazy" decoding="async" src="./assets/new-bedai-sabji.jpg" alt="Bedai Sabji"></div>
    <div class="cap"><span class="tag">Mathura classic</span><div class="t">Bedai Sabji</div><div class="d">Stuffed urad dal bedai with slow-cooked aloo sabji. The real Braj nashta.</div></div></div>
-  <div class="dish"><div class="ph"><img src="./assets/latest-chole-bhature.jpg" alt="Chole Bhature"></div>
+  <div class="dish"><div class="ph"><img loading="lazy" decoding="async" src="./assets/latest-chole-bhature.jpg" alt="Chole Bhature"></div>
    <div class="cap"><span class="tag">Fills the table</span><div class="t">Chole Bhature</div><div class="d">Fluffy bhature, slow-cooked chole. The plate that feeds everyone.</div></div></div>
-  <div class="dish"><div class="ph"><img src="./assets/new-aloo-tikki.jpg" alt="Aloo Tikki Chaat"></div>
+  <div class="dish"><div class="ph"><img loading="lazy" decoding="async" src="./assets/new-aloo-tikki.jpg" alt="Aloo Tikki Chaat"></div>
    <div class="cap"><span class="tag">Chaat counter</span><div class="t">Aloo Tikki Chaat</div><div class="d">Crisp tikki, dahi, chutneys and sev. The reason the evening crowd shows up.</div></div></div>
-  <div class="dish"><div class="ph"><img src="./assets/new-kulhad-lassi.jpg" alt="Kulhad Lassi"></div>
+  <div class="dish"><div class="ph"><img loading="lazy" decoding="async" src="./assets/new-kulhad-lassi.jpg" alt="Kulhad Lassi"></div>
    <div class="cap"><span class="tag">In a clay kulhad</span><div class="t">Kulhad Lassi</div><div class="d">Thick and malai-topped, kesar and pista, in an earthen kulhad. Mathura in a cup.</div></div></div>
-  <div class="dish"><div class="ph"><img src="./assets/new-kesar-rabdi.jpg" alt="Kesar Rabdi"></div>
+  <div class="dish"><div class="ph"><img loading="lazy" decoding="async" src="./assets/new-kesar-rabdi.jpg" alt="Kesar Rabdi"></div>
    <div class="cap"><span class="tag">Slow-cooked mithai</span><div class="t">Kesar Rabdi</div><div class="d">Reduced milk, kesar and dry fruit, served chilled. The Mathura sweet people remember.</div></div></div>
-  <div class="dish"><div class="ph"><img src="./assets/latest-jalebi.jpg" alt="Jalebi"></div>
+  <div class="dish"><div class="ph"><img loading="lazy" decoding="async" src="./assets/latest-jalebi.jpg" alt="Jalebi"></div>
    <div class="cap"><span class="tag">Hot from the kadhai</span><div class="t">Jalebi</div><div class="d">Crisp ghee jalebi, coiled and dipped, served hot and fresh.</div></div></div>
  </div>
 </div></section>
 
 <section class="band">
- <img class="sil" src="./assets/new/temple-silhouette.png" alt="" aria-hidden="true" />
+ <img loading="lazy" decoding="async" class="sil" src="./assets/new/temple-silhouette.png" alt="" aria-hidden="true" />
  <div class="wrap">
   <div class="kicker">For everyone far from home</div>
   <h2>Missing ghar in Pune? This is your address.</h2>
@@ -237,7 +266,7 @@ footer .social svg{width:16px;height:16px;flex:none}
 </section>
 
 <section id="gifting" class="gift"><div class="wrap"><div class="split">
- <div class="media"><img src="./assets/premium-box-feather.jpg" alt="Mathurawala festive sweet box with mor-pankh"></div>
+ <div class="media"><img loading="lazy" decoding="async" src="./assets/premium-box-feather.jpg" alt="Mathurawala festive sweet box with mor-pankh"></div>
  <div>
   <div class="kicker t">Gifting & festivals</div>
   <h2>Send Mathura home.</h2>
@@ -263,7 +292,7 @@ footer .social svg{width:16px;height:16px;flex:none}
   </div>
   <p style="margin-top:24px"><a class="btn btn-out" href="#visit">Come for lunch</a></p>
  </div>
- <div class="media"><img src="./assets/new/meal-thali-real.jpg" alt="Mathurawala Thali"></div>
+ <div class="media"><img loading="lazy" decoding="async" src="./assets/new/meal-thali-real.jpg" alt="Mathurawala Thali"></div>
 </div></div></section>
 
 <section class="hub"><div class="wrap">
@@ -303,6 +332,7 @@ footer .social svg{width:16px;height:16px;flex:none}
    <div><b>Phone</b> +91 93563 26855</div>
    <div><b>Delivery</b> Live on Zomato and Swiggy</div>
   </div>
+  <p style="margin-top:22px"><a class="btn btn-out" href="https://www.google.com/maps/dir/?api=1&destination=Mathurawala+Baner+Pune" target="_blank" rel="noopener">Get directions</a></p>
  </div>
  <div class="order-box">
   <h3>Order direct</h3>
@@ -310,12 +340,14 @@ footer .social svg{width:16px;height:16px;flex:none}
   <a class="btn btn-gold" href="https://wa.me/919356326855?text=Radhe%20Radhe%2C%20I%20want%20to%20order%20for%20pickup.">WhatsApp to order</a>
   <a class="btn btn-light" href="https://www.zomato.com/pune/mathurawala-baner">Order on Zomato</a>
  </div>
-</div></div></section>
+</div>
+<div class="map"><iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Mathurawala%20Baner%20Pune&z=15&output=embed" title="Mathurawala on Google Maps"></iframe></div>
+</div></section>
 
 <footer>
- <img class="sil" src="./assets/new/temple-silhouette.png" alt="" aria-hidden="true" />
+ <img loading="lazy" decoding="async" class="sil" src="./assets/new/temple-silhouette.png" alt="" aria-hidden="true" />
  <div class="wrap">
-  <img class="logo" src="./assets/new/logo-clean.png" alt="Mathurawala" />
+  <img loading="lazy" decoding="async" class="logo" src="./assets/new/logo-clean.png" alt="Mathurawala" />
   <div class="links">
    <a href="#food">Food</a><a href="#meals">Meals</a><a href="#gifting">Gifting</a><a href="./gallery.html">Gallery</a><a href="./braj-kitchen/index.html">Braj Kitchen</a><a href="#franchise">Franchise</a><a href="#visit">Visit</a>
   </div>
@@ -327,6 +359,8 @@ footer .social svg{width:16px;height:16px;flex:none}
   <div class="fine">Bharat's original food, from the world's oldest living kitchen.<br>Baner, Pune · Pure vegetarian · Made live, no preservatives · Radhe Radhe 🙏</div>
  </div>
 </footer>
+
+<a class="fab" href="https://wa.me/919356326855?text=Radhe%20Radhe%2C%20I%20want%20to%20order%20for%20pickup." aria-label="Order on WhatsApp" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20zm4.6-5.9c-.250-.13-1.5-.74-1.7-.82-.23-.08-.4-.13-.56.13-.17.25-.64.82-.79.99-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2-1.24-.74-.66-1.24-1.47-1.39-1.72-.14-.25-.02-.39.11-.51.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.13-.56-1.35-.77-1.85-.2-.48-.4-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.5-.61 1.71-1.21.21-.59.21-1.1.15-1.21-.06-.11-.23-.17-.48-.3z"/></svg></a>
 
 </body>
 </html>
