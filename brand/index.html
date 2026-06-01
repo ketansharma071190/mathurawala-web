@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Mathurawala | Brand Kit (the single source of truth)</title>
+<meta name="robots" content="noindex" />
+<link rel="icon" type="image/png" href="../assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,800;0,9..144,900;1,9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#F6EACB;--cream2:#FBF3DF;--paper:#FEFBF3;--ink:#16273C;--ink2:#33485F;--navy:#10243C;--navy-d:#0B1B2E;--teal:#15837E;--teal2:#1EA39A;--gold:#C98A1E;--gold2:#E0A52E;--maroon:#8A2D2A}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,system-ui,sans-serif;color:var(--ink);background:var(--cream);line-height:1.62;-webkit-font-smoothing:antialiased}
+h1,h2,h3,.serif{font-family:Fraunces,Georgia,serif}
+.wrap{max-width:980px;margin:0 auto;padding:0 28px}
+.sec{padding:54px 0;border-bottom:1px solid rgba(16,36,60,.1)}
+.kick{font-size:12.5px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:var(--gold);margin-bottom:12px}
+.kick.t{color:var(--teal)}
+h1{font-size:clamp(34px,6vw,60px);font-weight:900;line-height:1.04;color:var(--navy)}
+h2{font-size:clamp(24px,3.6vw,38px);font-weight:800;color:var(--navy);line-height:1.12}
+h3{font-family:Fraunces;font-size:19px;font-weight:700;color:var(--navy);margin-bottom:4px}
+p{font-size:16px;color:var(--ink2);margin-top:12px;max-width:760px}
+.lead{font-size:clamp(17px,2.1vw,20px);color:var(--ink)}
+.hero{background:linear-gradient(180deg,var(--cream2),var(--cream));padding:70px 0 56px}
+.cols{display:grid;gap:18px;margin-top:26px}
+.c2{grid-template-columns:1fr 1fr}.c3{grid-template-columns:repeat(3,1fr)}.c4{grid-template-columns:repeat(4,1fr)}
+.card{background:var(--paper);border-radius:16px;padding:22px;box-shadow:0 10px 26px rgba(16,36,60,.07)}
+.card p{font-size:14.5px;margin-top:6px}
+.logobox{display:flex;gap:18px;flex-wrap:wrap;margin-top:24px}
+.chip{flex:1;min-width:260px;border-radius:16px;padding:30px;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 26px rgba(16,36,60,.08)}
+.chip.light{background:var(--paper)}.chip.dark{background:var(--navy)}
+.chip img{height:46px;width:auto}
+.lab{font-size:12px;color:var(--ink2);margin-top:8px;text-align:center}
+.sw{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:24px}
+.sw .s{border-radius:14px;overflow:hidden;box-shadow:0 8px 20px rgba(16,36,60,.08);background:var(--paper)}
+.sw .s .col{height:84px}
+.sw .s .meta{padding:10px 12px}
+.sw .s .nm{font-weight:700;font-size:13.5px;color:var(--ink)}
+.sw .s .hx{font-size:12px;color:var(--ink2);font-family:ui-monospace,monospace}
+.sw .s .role{font-size:11.5px;color:var(--ink2);margin-top:3px}
+.type-spec{background:var(--paper);border-radius:16px;padding:26px;margin-top:22px;box-shadow:0 10px 26px rgba(16,36,60,.07)}
+.type-spec .fr{font-family:Fraunces;font-weight:900;font-size:44px;color:var(--navy);line-height:1.05}
+.type-spec .it{font-family:Fraunces;font-style:italic;font-weight:600;font-size:24px;color:var(--teal);margin-top:8px}
+.type-spec .bd{font-size:16px;color:var(--ink2);margin-top:14px;max-width:640px}
+.do{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:22px}
+.do .col{border-radius:16px;padding:22px}
+.do .yes{background:rgba(21,131,126,.08);border:1px solid rgba(21,131,126,.3)}
+.do .no{background:rgba(138,45,42,.07);border:1px solid rgba(138,45,42,.3)}
+.do h3{color:var(--navy)}
+.do ul{margin:10px 0 0 0;padding-left:18px}.do li{font-size:14.5px;color:var(--ink);margin:7px 0}
+.do .no li{color:#7a3733}
+.tagline{font-family:Fraunces;font-size:clamp(20px,2.6vw,28px);font-weight:800;color:var(--navy);margin-top:8px}
+.tagline span{color:var(--gold)}
+.motif{display:flex;gap:18px;flex-wrap:wrap;align-items:center;margin-top:22px}
+.motif .m{background:var(--navy);border-radius:14px;padding:18px;text-align:center}
+.motif img{height:74px;width:auto;display:block;margin:0 auto}
+.motif .lab{color:#cdd8e6}
+.callout{background:var(--navy);color:#e9eff6;border-radius:18px;padding:30px;margin-top:24px}
+.callout h3{color:var(--gold2)}
+.callout p{color:#cdd7e3;max-width:none}
+.callout .rule{font-family:Fraunces;font-size:20px;color:#fff;font-weight:700;margin:6px 0 0}
+@media(max-width:760px){.c2,.c3,.c4,.sw,.do{grid-template-columns:1fr 1fr}.sw{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.c3,.c4,.do{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<section class="hero"><div class="wrap">
+ <img src="../assets/new/logo-clean.png" alt="Mathurawala" style="height:60px;width:auto;margin-bottom:26px">
+ <div class="kick">The brand kit · the single source of truth</div>
+ <h1>How Mathurawala<br>looks, sounds and feels.</h1>
+ <p class="lead">Everything we make, the site, the deck, posts, packaging, gifting, follows this. If it does not fit here, it is off-brand. Built to carry a heritage brand to the world, not to look like a local shop.</p>
+</div></section>
+
+<section class="sec"><div class="wrap">
+ <div class="kick t">The idea</div>
+ <h2>Bharat's original food. From the world's oldest living kitchen.</h2>
+ <p>We are the standard-bearer of Mathura and Braj cuisine, the food of Krishna's own city, made live. The most authentic, emotionally loaded, commercially unclaimed food banner in India. We are not a sweet shop and not a comfort-food eatery. We are the modern brand of Bharat's original, living food: pure, made fresh, premium, and proud.</p>
+ <div class="cols c3">
+  <div class="card"><h3>Authenticity</h3><p>The real thing, from the source. Recipes from Mathura, not market research.</p></div>
+  <div class="card"><h3>Heritage with grandeur</h3><p>5,000 years, Krishna's city, the flute and the feather. Ancient, but premium and alive, never quaint.</p></div>
+  <div class="card"><h3>Made live, pure</h3><p>Fried fresh, simmered slow, pure vegetarian, no frozen, no preservatives. The craft is the product.</p></div>
+ </div>
+</div></section>
+
+<section class="sec"><div class="wrap">
+ <div class="kick">Logo</div>
+ <h2>The wordmark on the flute, with the mor-pankh.</h2>
+ <p>The master logo is the "mathurawala" wordmark resting on Krishna's bansuri (flute), with the complete peacock feather and its tassel at the end. The feather is the brand's signature mark and should keep its colour wherever possible.</p>
+ <div class="logobox">
+  <div class="chip light"><div><img src="../assets/new/logo-clean.png" alt=""><div class="lab">Primary · dark wordmark, on light/cream backgrounds</div></div></div>
+  <div class="chip dark"><div><img src="../assets/new/logo-light.png" alt=""><div class="lab" style="color:#cdd8e6">Reversed · white wordmark + coloured feather, on navy/dark</div></div></div>
+ </div>
+ <div class="do">
+  <div class="col yes"><h3>Do</h3><ul><li>Use the dark logo on cream/light, the reversed one on navy/dark</li><li>Keep the mor-pankh in colour (teal, blue, gold)</li><li>Give it clear space; let it breathe</li><li>Use the feather alone as the app/favicon mark</li></ul></div>
+  <div class="col no"><h3>Don't</h3><ul><li>Don't put the dark logo on a dark background (or vice versa)</li><li>Don't flatten the feather to one colour or white when colour is possible</li><li>Don't stretch, rotate, recolour the wordmark, or add effects</li><li>Don't crowd it with text or clip the feather</li></ul></div>
+ </div>
+</div></section>
+
+<section class="sec"><div class="wrap">
+ <div class="kick t">Colour</div>
+ <h2>Warm, heritage, premium.</h2>
+ <p>Cream is the ground, navy is the depth, teal and gold are the living accents (the feather), maroon is used sparingly for festive emphasis.</p>
+ <div class="sw">
+  <div class="s"><div class="col" style="background:#F6EACB"></div><div class="meta"><div class="nm">Cream</div><div class="hx">#F6EACB</div><div class="role">Primary ground</div></div></div>
+  <div class="s"><div class="col" style="background:#FEFBF3"></div><div class="meta"><div class="nm">Paper</div><div class="hx">#FEFBF3</div><div class="role">Cards / surfaces</div></div></div>
+  <div class="s"><div class="col" style="background:#10243C"></div><div class="meta"><div class="nm">Navy</div><div class="hx">#10243C</div><div class="role">Depth / dark sections</div></div></div>
+  <div class="s"><div class="col" style="background:#16273C"></div><div class="meta"><div class="nm">Ink</div><div class="hx">#16273C</div><div class="role">Text</div></div></div>
+  <div class="s"><div class="col" style="background:#15837E"></div><div class="meta"><div class="nm">Teal</div><div class="hx">#15837E</div><div class="role">Accent (feather)</div></div></div>
+  <div class="s"><div class="col" style="background:#E0A52E"></div><div class="meta"><div class="nm">Gold</div><div class="hx">#E0A52E</div><div class="role">Accent / CTAs</div></div></div>
+  <div class="s"><div class="col" style="background:#C98A1E"></div><div class="meta"><div class="nm">Deep gold</div><div class="hx">#C98A1E</div><div class="role">Gold on light</div></div></div>
+  <div class="s"><div class="col" style="background:#8A2D2A"></div><div class="meta"><div class="nm">Maroon</div><div class="hx">#8A2D2A</div><div class="role">Festive, sparing</div></div></div>
+ </div>
+</div></section>
+
+<section class="sec"><div class="wrap">
+ <div class="kick">Typography</div>
+ <h2>Fraunces for soul, Inter for clarity.</h2>
+ <div class="type-spec">
+  <div class="fr">Mathura ka asli swad.</div>
+  <div class="it">Fraunces italic, for the Braj accents and pull-quotes</div>
+  <div class="bd"><b>Fraunces</b> (serif) carries every headline and the heritage feeling, weights 800 to 900. <b>Inter</b> carries all body and UI text (this paragraph), weights 400 to 600. Kickers are Inter, uppercase, letter-spaced, in gold or teal.</div>
+ </div>
+</div></section>
+
+<section class="sec"><div class="wrap">
+ <div class="kick t">Motifs</div>
+ <h2>The feather, the flute, the temple.</h2>
+ <p>Krishna's mor-pankh and bansuri, and the Mathura ghat-temple skyline used as a soft watermark behind dark sections. Used with restraint, they signal heritage without clutter.</p>
+ <div class="motif">
+  <div class="m"><img src="../assets/favicon.png" alt="mor-pankh"><div class="lab">Mor-pankh (signature mark)</div></div>
+  <div class="m" style="padding:22px 26px"><img src="../assets/new/logo-light.png" alt="flute" style="height:40px"><div class="lab">Wordmark on the flute</div></div>
+ </div>
+</div></section>
+
+<section class="sec"><div class="wrap">
+ <div class="kick">Voice and tone</div>
+ <h2>Authentic and proud, not homely.</h2>
+ <p>We sound like a confident heritage brand that happens to be deeply warm, not like a humble local kitchen. Rooted, premium, a little reverent (Krishna, Mathura), and human. We use Braj Bhasha touches (Radhe Radhe) for authenticity, never for cuteness.</p>
+
+ <div class="callout">
+  <h3>The "ghar" rule (important)</h3>
+  <p class="rule">Home is a seasoning, not the main dish.</p>
+  <p>Leaning on "ghar / homely / ghar jaisa / just like home" makes us read as a small comfort eatery and caps the brand. Lead instead with <b>original, authentic, from the source, made live, pure, Mathura, the way it has always been made.</b> The homesick-diaspora emotion is real and powerful, so use it <b>sparingly and through customer voice</b> (a real review), and frame the connection as <b>the real thing from the source</b> (pride), not as homely comfort. One well-placed note beats ten.</p>
+ </div>
+
+ <div class="do">
+  <div class="col yes"><h3>Words we lead with</h3><ul><li>asli, shuddh, original, pure</li><li>Mathura, Braj, Krishna's city</li><li>made live, fresh, the source, 5,000 years</li><li>the way Mathura makes it; the standard</li><li>Radhe Radhe (sparing, authentic)</li></ul></div>
+  <div class="col no"><h3>Words we limit or avoid</h3><ul><li>homely, ghar jaisa, just like home (overused)</li><li>comfort food, cosy, humble</li><li>generic "authentic taste", "delicious", "yummy"</li><li>anything that sounds small or local-only</li><li>em dashes, ever; AI-sounding phrasing</li></ul></div>
+ </div>
+</div></section>
+
+<section class="sec"><div class="wrap">
+ <div class="kick t">Taglines</div>
+ <h2>What we say.</h2>
+ <div class="tagline">Master: Bharat's original food. <span>From the world's oldest living kitchen.</span></div>
+ <p>Supporting lines (use in context, never all at once):</p>
+ <ul style="margin-top:6px;padding-left:20px;color:var(--ink);font-size:16px">
+  <li>Mathura ka asli swad.</li>
+  <li>Not inspired by Mathura. From Mathura.</li>
+  <li>The food of Krishna's city, made live.</li>
+ </ul>
+</div></section>
+
+<section class="sec"><div class="wrap">
+ <div class="kick">Photography</div>
+ <h2>Real, warm, made-live.</h2>
+ <p>Real food on terracotta and in kulhads, warm light, the mor-pankh in frame, the craft visible (the flame, the ghee, the pour). Avoid anything that looks AI-generated, over-perfect, or stocky. If a shot looks fake, it is off-brand. When we do not have a real photo of an item yet, use a clean typographic treatment in the palette rather than a fake image.</p>
+ <div class="cols c4">
+  <div class="card" style="padding:0;overflow:hidden"><img src="../assets/new-kulhad-lassi.jpg" alt="" style="width:100%;display:block"></div>
+  <div class="card" style="padding:0;overflow:hidden"><img src="../assets/new-kesar-rabdi.jpg" alt="" style="width:100%;display:block"></div>
+  <div class="card" style="padding:0;overflow:hidden"><img src="../assets/new-bedai-sabji.jpg" alt="" style="width:100%;display:block"></div>
+  <div class="card" style="padding:0;overflow:hidden"><img src="../assets/premium-box-feather.jpg" alt="" style="width:100%;display:block"></div>
+ </div>
+</div></section>
+
+<section class="sec" style="border-bottom:none;text-align:center"><div class="wrap">
+ <img src="../assets/new/logo-clean.png" alt="Mathurawala" style="height:46px;width:auto;margin:0 auto 14px">
+ <p style="margin:0 auto;color:var(--ink2)">Everything follows this. Radhe Radhe.</p>
+</div></section>
+
+</body>
+</html>
