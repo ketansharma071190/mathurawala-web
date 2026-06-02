@@ -48,6 +48,34 @@ h2{font-size:clamp(28px,4.4vw,46px);font-weight:800;line-height:1.08}
 .sub-role{font-family:Inter;font-size:15px;font-weight:600;letter-spacing:.02em;color:var(--teal2);margin-top:10px}
 .row{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
 .foot{font-size:14px;color:#9fb0c4;margin-top:24px}
+.chart{margin-top:26px;border-radius:14px;overflow:hidden;box-shadow:0 14px 34px rgba(20,37,60,.12)}
+.chart img{width:100%;display:block}
+.cap2{font-size:13px;color:var(--muted);margin-top:12px;text-align:center}
+.tag2{display:inline-block;font-size:12px;font-weight:700;color:var(--teal2);background:rgba(35,167,156,.12);border:1px solid rgba(35,167,156,.4);padding:3px 10px;border-radius:20px;margin-top:8px}
+.ebitda{margin-top:24px;background:rgba(224,161,46,.13);border:1px solid var(--gold);border-radius:14px;padding:18px 24px;display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.ebitda .big2{font-family:Fraunces;font-weight:900;font-size:36px;color:var(--gold2);line-height:1}
+.ebitda .t2{font-size:15px;color:#cdd7e3;font-weight:500}
+.rev-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:24px}
+.rev{background:#fff;border-radius:14px;padding:18px 20px;box-shadow:0 10px 26px rgba(20,37,60,.08)}
+.rev .st{color:var(--gold);font-size:15px;letter-spacing:2px}
+.rev .rq{font-family:Fraunces;font-size:16.5px;color:var(--ink);margin:8px 0 10px;line-height:1.42}
+.rev .by{font-size:12.5px;color:var(--muted);font-weight:600}
+.rev .by b{color:var(--teal)}
+.tl{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}
+.tl .step{border-top:3px solid var(--gold);padding-top:18px}
+.tl .when{font-family:Fraunces;font-weight:800;color:var(--gold2);font-size:15px}
+.tl h4{font-size:16px;color:#fff;margin:6px 0 8px;font-family:Fraunces;font-weight:700}
+.tl p{font-size:13.5px;color:#c4d0de}
+.tl .step:nth-child(3){border-color:var(--teal2)}.tl .step:nth-child(3) .when{color:var(--teal2)}
+.asks{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:22px}
+.askcard{border-radius:16px;padding:24px;background:#fff;box-shadow:0 10px 26px rgba(20,37,60,.08)}
+.askcard.lead2{border:2px solid var(--gold);background:rgba(224,161,46,.07)}
+.askcard .amt2{font-family:Fraunces;font-weight:900;font-size:30px;color:var(--navy)}
+.askcard .scope{font-size:12.5px;color:var(--teal);font-weight:700;text-transform:uppercase;letter-spacing:.05em;margin-top:3px}
+.askcard ul{margin:12px 0 0;padding-left:17px}.askcard li{font-size:13px;color:var(--ink);margin:5px 0}
+.askcard .reach{margin-top:12px;font-size:13.5px;color:var(--ink);border-top:1px dashed #d8c79f;padding-top:10px}
+.askcard .reach b{color:var(--maroon)}
+@media(max-width:720px){.rev-grid,.tl,.asks{grid-template-columns:1fr}}
 ul{margin-top:14px;padding-left:20px}li{margin:7px 0;font-size:15.5px}.dark li,.dark2 li{color:#cdd7e3}
 @media(max-width:720px){.g2,.g3,.g4{grid-template-columns:1fr}.slide{padding:60px 0}}
 </style>
@@ -60,7 +88,7 @@ ul{margin-top:14px;padding-left:20px}li{margin:7px 0;font-size:15.5px}.dark li,.
   <div class="kick" style="margin-top:36px">Investor brief · 2026</div>
   <h1 class="big" style="font-size:clamp(38px,7vw,76px)">Bharat's original food.<br><span class="gold">From the world's oldest living kitchen.</span></h1>
   <p class="lead">We are building the standard-bearer brand for India's living food heritage, starting from Mathura, Krishna's birthplace.</p>
-  <div class="row"><span class="pill">Baner, Pune · since 2023</span><span class="pill">Cash self-sufficient</span><span class="pill">Raising ₹2 Cr</span></div>
+  <div class="row"><span class="pill">Baner, Pune · since 2023</span><span class="pill">Cash self-sufficient</span><span class="pill">Raising $2M</span></div>
  </div>
 </section>
 
@@ -80,38 +108,46 @@ ul{margin-top:14px;padding-left:20px}li{margin:7px 0;font-size:15.5px}.dark li,.
  <div class="kick t">What we are</div>
  <h2>Not a restaurant chain. A heritage food brand with two engines.</h2>
  <div class="grid g2">
-  <div class="card"><h3>The soul + content engine</h3><p>Outlets. The proof, the experience, the story, and where the content is born.</p></div>
-  <div class="card"><h3>The scale engine</h3><p>Packaged peda and namkeen, festive gifting, and the diaspora. National, then global.</p></div>
+  <div class="card"><h3>The soul + content engine <span style="color:var(--teal2)">· ~₹5 Cr</span></h3><p>Outlets. The proof, the experience, the story, and where the content is born. A steady recall base, not the scale lever.</p></div>
+  <div class="card"><h3>The scale engine <span style="color:var(--gold2)">· ~₹50 Cr</span></h3><p>Packaged peda and namkeen, festive gifting, and the diaspora, shipped via D2C and quick-commerce. National, then global. This is where we scale.</p></div>
  </div>
- <p class="lead" style="margin-top:24px"><b>Existence proof:</b> Haldiram turned a 1937 Bikaner namkeen identity into a ~$8-10B global brand on exactly this model. The Krishna's-Mathura lane is open.</p>
+ <div class="chart"><img src="../assets/deck-projection.png" alt="Illustrative 5-year revenue trajectory: outlets steady, D2C scaling" /></div>
+ <p class="cap2">Illustrative 5-year trajectory, built off today's ~₹1.1 Cr. Outlets keep pushing recall and feeding D2C; D2C is what compounds. <span class="tag2">Existence proof: Haldiram, a 1937 namkeen identity, is now ~$8-10B on exactly this model</span></p>
 </div></section>
 
 <section class="slide dark"><div class="wrap">
  <div class="kick">It already works</div>
- <h2>One outlet. Real numbers. Runs without the founder.</h2>
+ <h2>One outlet. Real numbers. Built to run on systems.</h2>
  <div class="grid g4" style="margin-top:34px">
   <div class="stat"><div class="n">₹1.1 Cr+</div><div class="l">ARR (management, ~₹9.2L/mo)</div></div>
   <div class="stat"><div class="n">+129%</div><div class="l">YoY growth</div></div>
   <div class="stat"><div class="n">135+</div><div class="l">orders / day · ₹193 AOV</div></div>
   <div class="stat"><div class="n">4.2★</div><div class="l">701 Google reviews</div></div>
  </div>
- <p class="foot">Management ARR ~₹1.1 Cr, including ~15% direct cash/UPI not captured by the aggregators; PetPooja-verified base ~₹95L; full diligence bridge available. Cash self-sufficient since July 2025. Dine-in 58% · Zomato/Swiggy ~24% · walk-in and direct the rest. ~19% EBITDA, heading to 24%. Live since Sept 2023, and it runs without the founder as daily manager.</p>
+ <div class="ebitda"><div class="big2">~19% → 24%</div><div class="t2"><b>EBITDA margin, and widening.</b> Profitable today, not buying growth at a loss. The unit economics work before we scale.</div></div>
+ <p class="foot">Management ARR ~₹1.1 Cr, including ~15% direct cash/UPI not captured by the aggregators; PetPooja-verified base ~₹95L; full diligence bridge available. Cash self-sufficient since July 2025. Channel mix: roughly half in-store, half on aggregators (Zomato + Swiggy). Operating 2.5+ years, since Sept 2023, on documented SOPs and a trained team.</p>
 </div></section>
 
 <section class="slide light2"><div class="wrap">
  <div class="kick t">The customer already loves us</div>
- <h2>The homesick Bhartiya, in their own words.</h2>
- <p class="q" style="margin-top:20px">"If you're feeling homesick in Pune, this place is truly a blessing."<br>"It takes you back to your hometown."</p>
- <p class="lead">Our spearhead customer is the rooted-but-displaced Bhartiya. The internal diaspora first (UP and Bhartiya families in the metros), the global NRI next. Huge, emotional, underserved, and they self-identify the moment they taste it.</p>
+ <h2>The Bhartiya palate knows the original.</h2>
+ <div class="rev-grid">
+  <div class="rev"><div class="st">★★★★★</div><div class="rq">"Authentic Mathura food, with the same original, traditional taste."</div><div class="by"><b>Shekhar Srivastava</b> · Google review</div></div>
+  <div class="rev"><div class="st">★★★★★</div><div class="rq">"Aloo Tikki Chaat, the best I've ever eaten. The Rasmalai was outstanding, the best I've had."</div><div class="by"><b>Saurabh Suratkar</b> · Google review</div></div>
+  <div class="rev"><div class="st">★★★★★</div><div class="rq">"Was missing that Agra taste of chaat, glad I finally found it here. Things I don't think are available anywhere else in Pune."</div><div class="by"><b>Akrati Gangwar</b> · Google review</div></div>
+  <div class="rev"><div class="st">★★★★★</div><div class="rq">"If you're feeling homesick in Pune, this place is truly a blessing."</div><div class="by"><b>Anushka Sharma</b> · Google review</div></div>
+ </div>
+ <p class="lead" style="margin-top:22px">Spearhead customer: the rooted, displaced Bhartiya who knows the real thing the moment they taste it. The internal diaspora first (UP and Bhartiya families in the metros), the global NRI next. <b>4.2★ across 700+ reviews</b>, and they self-identify on the first bite.</p>
 </div></section>
 
 <section class="slide dark2"><div class="wrap">
- <div class="kick">Why now</div>
- <div class="grid g2">
-  <div class="card"><h3>The processed-food backlash</h3><p>The world is turning against frozen, preservative food and wants the real, fresh thing.</p></div>
-  <div class="card"><h3>Bharatiya pride is rising</h3><p>Heritage and roots are aspirational, not apologetic, for the first time in a generation.</p></div>
-  <div class="card"><h3>The rails finally exist</h3><p>Quick-commerce and D2C let a heritage food brand ship and scale like never before.</p></div>
-  <div class="card"><h3>A diaspora with money and longing</h3><p>Millions of displaced Bhartiyas with spending power, and no brand serving the feeling.</p></div>
+ <div class="kick">Why now, and in what order</div>
+ <h2 class="gold">The window is open, and the prize is sequenced.</h2>
+ <p class="lead">Three forces have lined up at once. We capture them in order, prove packaged at home first, then take the feeling to the diaspora.</p>
+ <div class="tl">
+  <div class="step"><div class="when">Now</div><h4>The window is open</h4><p>Backlash against frozen, preservative food. Bhartiya pride is aspirational again. And quick-commerce + D2C rails finally exist. We already have the proven outlet and the brand.</p></div>
+  <div class="step"><div class="when">Year 1-2</div><h4>Win packaged India</h4><p>Launch peda, namkeen and gifting on D2C and quick-commerce. Own the festival moments. Add outlet density for recall. Build the engine on home soil.</p></div>
+  <div class="step"><div class="when">Year 3+</div><h4>The diaspora, then global</h4><p>Millions of displaced Bhartiyas with spending power and no brand serving the feeling. The biggest prize, taken only after packaged is proven at home.</p></div>
  </div>
 </div></section>
 
@@ -135,16 +171,35 @@ ul{margin-top:14px;padding-left:20px}li{margin:7px 0;font-size:15.5px}.dark li,.
 </div></section>
 
 <section class="slide light2"><div class="wrap">
- <div class="kick t">The ask</div>
- <h2>Raising <span style="color:var(--maroon)">₹2 Cr</span> to build the standard-bearer brand.</h2>
- <ul>
-  <li><b>Brand + content/authority moat</b> the durable asset</li>
-  <li><b>One flagship brand-temple outlet</b> experience done right</li>
-  <li><b>Central kitchen base</b> for made-live freshness at scale</li>
-  <li><b>Packaged line v1 + diaspora pilot</b> peda, namkeen, gifting that ship</li>
-  <li><b>Operating bench + 18-24 months runway</b></li>
- </ul>
- <p class="lead">Structure flexible (equity / SPV / revenue-share), founder-controlled. Purity, quality and control protected. The physical outlet can be SPV-funded so parent equity stays with patient believers in the brand.</p>
+ <div class="kick t">The ask · two ways in</div>
+ <h2>Where the money goes, and where it gets us.</h2>
+ <div class="asks">
+  <div class="askcard lead2">
+   <div class="amt2">$2M <span style="font-size:16px;color:var(--muted)">· ~₹16.5 Cr</span></div>
+   <div class="scope">The scale round · outlet + central kitchen + D2C</div>
+   <ul>
+    <li>Outlets + kiosks (3-4): ~₹4 Cr</li>
+    <li>Central kitchen(s) by radius: ~₹2.5 Cr</li>
+    <li>D2C + packaged line, product, packaging, listings, performance: ~₹4.5 Cr</li>
+    <li>Diaspora pilot: ~₹1.5 Cr</li>
+    <li>Brand + content/authority moat: ~₹1.5 Cr</li>
+    <li>Working capital + 24-30 mo runway: ~₹2.5 Cr</li>
+   </ul>
+   <div class="reach"><b>Where we reach (24-30 mo):</b> multi-outlet base + central kitchen + D2C launched and scaling, with D2C the majority of new growth. ~₹10-12 Cr ARR, on the trajectory to ₹50 Cr.</div>
+  </div>
+  <div class="askcard">
+   <div class="amt2">₹2 Cr</div>
+   <div class="scope">The lean round · outlet + central kitchen</div>
+   <ul>
+    <li>Flagship brand-temple outlet: ~₹85 L</li>
+    <li>Central kitchen base: ~₹55 L</li>
+    <li>Working capital + ops bench: ~₹40 L</li>
+    <li>Brand + content moat: ~₹20 L</li>
+   </ul>
+   <div class="reach"><b>Where we reach (18-24 mo):</b> 3 outlets live + central kitchen, ~₹3.5 Cr ARR (3x today), ~400+ orders/day, EBITDA at ~24%. The proof, before D2C.</div>
+  </div>
+ </div>
+ <p class="lead" style="margin-top:20px;font-size:16px">Structure flexible (equity / CCD / SPV / revenue-share), founder-controlled. The physical outlets can be SPV-funded so parent equity stays with believers in the brand. We never lead with a valuation; we let demand set it.</p>
 </div></section>
 
 <section class="slide dark2"><div class="wrap">
