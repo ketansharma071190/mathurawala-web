@@ -155,38 +155,12 @@ def save(canvas, name):
 # 1. RAKSHA BANDHAN — Malai Ghewar (typographic, navy+gold festive)
 # ====================================================================
 def rakhi():
-    W,H=1080,1350
-    c=Image.new("RGBA",(W,H),NAVY+(255,))
-    # warm radial glow center
-    glow=Image.new("L",(W,H),0); gd=ImageDraw.Draw(glow)
-    gd.ellipse([W//2-560,H//2-560,W//2+560,H//2+560],fill=70)
-    glow=glow.filter(ImageFilter.GaussianBlur(180))
-    warm=Image.new("RGBA",(W,H),GOLD2+(255,)); c=Image.composite(warm,c,glow)
-    d=ImageDraw.Draw(c)
-    # thin gold inner frame
-    d.rectangle([40,40,W-40,H-40],outline=GOLD2,width=2)
-    d.rectangle([52,52,W-52,H-52],outline=(GOLD2[0],GOLD2[1],GOLD2[2]),width=1)
-    cx=W//2
-    paste_feather(c, 150, (cx-66, 132), alpha=255)
-    y=320
-    y=kicker(d,cx,y,"Rakhi · 28 August",GOLDL); y+=58
-    big=f_serif(150)
-    y=centered(d,["Bhai ka"],f_serif_r(74),cx,y,CREAM,84);
-    centered(d,["GHEWAR"],big,cx,y,GOLD2,150)
-    y+=176
-    centered(d,["aaya hai."],f_serif_r(74),cx,y,CREAM,84); y+=126
-    sub=f_geoi(33)
-    for ln in ["Mathura ka malai ghewar, kesar, rabdi","aur chandi ke saath. Sirf Sawan bhar."]:
-        w=d.textlength(ln,font=sub); d.text((cx-w/2,y),ln,font=sub,fill=(206,217,230)); y+=46
-    y+=30
-    dotrow(d,cx,y,TEAL2); y+=46
-    # rakhi-box CTA chip
-    chip="Rakhi gifting boxes · order on WhatsApp"
-    fc=f_sans(25); cw=text_w(d,chip.upper(),fc,3)
-    d.rounded_rectangle([cx-cw/2-30,y-2,cx+cw/2+30,y+52],radius=27,outline=GOLD2,width=2)
-    draw_ls(d,(cx-cw/2,y+12),chip.upper(),fc,GOLD2,3)
-    place_logo(c,light=True,h=54)
-    save(c,"post-rakhi-ghewar.jpg")
+    # real Malai Ghewar photo (dug from Drive); photo poster, consistent with the set
+    photo_poster("post-rakhi-ghewar.jpg", A("ghewar-malai.jpg"),
+        "Rakhi · 28 August", GOLDL,
+        "Bhai ka", "Ghewar aaya hai.", GOLD2,
+        "Mathura ka malai ghewar, kesar, rabdi aur chandi ke saath. Sirf Sawan bhar.",
+        top_badge="Rakhi gifting boxes", big_font=104)
 
 # ====================================================================
 # generic photo-hero poster (bottom text on gradient)
@@ -310,28 +284,12 @@ def makhan_mishri():
 # 4. GANESH CHATURTHI — Modak (Pune-local, square, teal+gold)
 # ====================================================================
 def modak():
-    W,H=1080,1080
-    c=Image.new("RGBA",(W,H),TEAL+(255,))
-    c.alpha_composite(vgrad(W,H,(26,150,143),(15,95,91),255,255),(0,0))
-    glow=Image.new("L",(W,H),0); gd=ImageDraw.Draw(glow)
-    gd.ellipse([W//2-460,H//2-460,W//2+460,H//2+460],fill=66)
-    glow=glow.filter(ImageFilter.GaussianBlur(160))
-    warm=Image.new("RGBA",(W,H),GOLD2+(255,)); c=Image.composite(warm,c,glow)
-    d=ImageDraw.Draw(c)
-    d.rectangle([38,38,W-38,H-38],outline=CREAM,width=2)
-    cx=W//2
-    paste_feather(c,118,(cx-52,108),alpha=255)
-    y=258
-    y=kicker(d,cx,y,"Ganesh Chaturthi · 14 September",CREAM); y+=52
-    centered(d,["Bappa ke liye,"],f_serif_r(60),cx,y,CREAM,72); y+=92
-    centered(d,["MODAK"],f_serif(168),cx,y,(255,247,225),168); y+=196
-    centered(d,["ghee mein, haath se banaye."],f_geoi(34),cx,y,(238,228,205),48); y+=92
-    chip="Pune ka apna tyohaar · Mathura ka swad"
-    fc=f_sans(24); cw=text_w(d,chip.upper(),fc,3)
-    d.rounded_rectangle([cx-cw/2-28,y-2,cx+cw/2+28,y+50],radius=26,outline=CREAM,width=2)
-    draw_ls(d,(cx-cw/2,y+13),chip.upper(),fc,CREAM,3)
-    place_logo(c,light=True,h=50)
-    save(c,"post-ganesh-modak.jpg")
+    # real Motichoor Modak photo (dug from Drive); photo poster, consistent with the set
+    photo_poster("post-ganesh-modak.jpg", A("modak-motichoor.jpg"),
+        "Ganesh Chaturthi · 14 September", GOLDL,
+        "Bappa ke liye,", "Modak.", GOLD2,
+        "Ghee mein, haath se banaye. Pune ka apna tyohaar, Mathura ka swad.",
+        top_badge="Modak & prasad boxes", big_font=150)
 
 if __name__=="__main__":
     rakhi()
