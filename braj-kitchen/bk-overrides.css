@@ -1,0 +1,197 @@
+/*
+ * Mathurawala Braj Kitchen hub — cream-theme overrides.
+ * Loaded AFTER styles.css to align the hub content with the main site palette.
+ * Nav/footer are already handled by per-page inline <style> blocks.
+ */
+
+:root {
+  --bko-cream:  #F6EACB;
+  --bko-cream2: #FBF3DF;
+  --bko-paper:  #FEFBF3;
+  --bko-navy:   #10243C;
+  --bko-navy-d: #0B1B2E;
+  --bko-teal:   #15837E;
+  --bko-teal2:  #1EA39A;
+  --bko-gold:   #C98A1E;
+  --bko-gold2:  #E0A52E;
+  --bko-ink:    #16273C;
+  --bko-ink2:   #33485F;
+}
+
+/* body background matches main site */
+body {
+  background: var(--bko-cream);
+  color: var(--bko-ink);
+}
+
+/* breadcrumbs */
+.breadcrumbs {
+  color: var(--bko-ink2);
+}
+.breadcrumbs a {
+  color: var(--bko-teal);
+  border-bottom-color: var(--bko-gold2);
+  font-weight: 700;
+}
+
+/* article typography */
+.article-body p,
+.article-body ul,
+.article-body ol {
+  color: var(--bko-ink2);
+}
+.article-body h1,
+.article-body h2,
+.article-body h3 {
+  color: var(--bko-navy);
+}
+
+/* inline links */
+.article-body a.inline {
+  color: var(--bko-teal);
+  border-bottom-color: var(--bko-gold2);
+}
+
+/* answer-first callout */
+.answer-first {
+  background: var(--bko-cream2);
+  border-left-color: var(--bko-gold2);
+}
+.answer-first p {
+  color: var(--bko-navy);
+}
+
+/* fact table */
+.fact-table th,
+.fact-table td {
+  color: var(--bko-ink2);
+  border-color: rgba(16,36,60,.14);
+}
+.fact-table th {
+  background: var(--bko-cream2);
+  color: var(--bko-navy);
+}
+
+/* FAQ block */
+.faq-block {
+  border-top-color: var(--bko-gold2);
+}
+.faq-item {
+  border-bottom-color: rgba(16,36,60,.1);
+}
+.faq-item h3 {
+  color: var(--bko-navy);
+}
+.faq-item p {
+  color: var(--bko-ink2);
+}
+
+/* hub-cta: dark panel, aligned with new navy */
+.hub-cta {
+  background: linear-gradient(90deg, rgba(21,131,126,.18), transparent 60%),
+              var(--bko-navy-d);
+  border-top-color: var(--bko-gold2);
+}
+.hub-cta h2 {
+  color: #F7F0E0;
+}
+.hub-cta p {
+  color: rgba(247,240,224,.82);
+}
+.hub-cta .button.primary {
+  background: var(--bko-gold2);
+  color: var(--bko-navy);
+  border-radius: 40px;
+  padding: 14px 28px;
+  font-weight: 700;
+  font-size: 15px;
+  display: inline-block;
+  transition: .2s;
+  text-decoration: none;
+}
+.hub-cta .button.primary:hover {
+  background: var(--bko-gold);
+}
+
+/* author card */
+.author-card {
+  background: var(--bko-cream2);
+  color: var(--bko-ink2);
+}
+.author-card strong {
+  color: var(--bko-navy);
+}
+.author-card a.inline {
+  color: var(--bko-teal);
+}
+
+/* sources */
+.sources {
+  border-top-color: rgba(16,36,60,.14);
+  color: var(--bko-ink2);
+}
+.sources h2 {
+  color: var(--bko-navy);
+}
+.sources a {
+  color: var(--bko-teal);
+  border-bottom-color: var(--bko-gold2);
+}
+
+/* hub grid cards */
+.hub-card {
+  background: var(--bko-paper);
+  border-color: rgba(16,36,60,.1);
+  border-top-color: var(--bko-gold2);
+  text-decoration: none;
+  transition: .22s;
+}
+.hub-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(16,36,60,.12);
+}
+.hub-card span {
+  color: var(--bko-teal);
+}
+.hub-card h3 {
+  color: var(--bko-navy);
+  font-size: 20px;
+}
+.hub-card p {
+  color: var(--bko-ink2);
+}
+
+/* eyebrow / article meta */
+.eyebrow {
+  color: var(--bko-teal);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+.article-meta {
+  color: var(--bko-ink2);
+}
+
+/* related-links */
+.related-links {
+  border-top-color: rgba(16,36,60,.12);
+}
+.related-links h2 {
+  color: var(--bko-navy);
+}
+.related-links a {
+  color: var(--bko-teal);
+  border-bottom-color: var(--bko-gold2);
+}
+
+/* hub-shell top padding aligns better with sticky cream header */
+.hub-shell {
+  padding-top: clamp(32px, 4vw, 56px);
+}
+
+@media (max-width: 680px) {
+  .hub-grid {
+    grid-template-columns: 1fr;
+  }
+}

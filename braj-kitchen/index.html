@@ -18,6 +18,7 @@
     <meta name="theme-color" content="#062744" />
     <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="../styles.css?v=20260531-hub1" />
+    <link rel="stylesheet" href="./bk-overrides.css">
     <script defer src="../app.js"></script>
     <script type="application/ld+json">
       {
@@ -99,23 +100,69 @@
         ]
       }
     </script>
-  </head>
+  
+<style>
+/* ---- new nav / footer override (bk- prefix, no conflict with styles.css) ---- */
+:root{--bk-cream:#F6EACB;--bk-navy:#10243C;--bk-navy-d:#0B1B2E;--bk-teal:#15837E;--bk-gold:#C98A1E;--bk-gold2:#E0A52E;}
+.site-header{display:none!important}
+header{position:sticky;top:0;z-index:60;background:rgba(246,234,203,.92);backdrop-filter:blur(8px);border-bottom:1px solid rgba(21,131,126,.18)}
+.bk-nav{display:flex;align-items:center;justify-content:space-between;height:76px;gap:20px;max-width:1200px;margin:0 auto;padding:0 28px}
+.bk-brand img{height:46px;width:auto;display:block}
+.bk-menu{display:flex;gap:24px}
+.bk-menu a{color:var(--bk-navy);font-weight:600;font-size:15px;text-decoration:none}
+.bk-menu a:hover{color:var(--bk-teal)}
+.bk-btn{display:inline-block;padding:11px 20px;border-radius:40px;font-weight:600;font-size:14px;background:var(--bk-gold2);color:var(--bk-navy);border:none;text-decoration:none;transition:.2s}
+.bk-btn:hover{background:var(--bk-gold)}
+.bk-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;margin:-8px}
+.bk-hamburger span{width:24px;height:2.5px;background:var(--bk-navy);border-radius:2px;transition:.25s}
+.bk-menu-order{display:none}
+#navtog:checked~.bk-hamburger span:nth-child(1){transform:translateY(7.5px) rotate(45deg)}
+#navtog:checked~.bk-hamburger span:nth-child(2){opacity:0}
+#navtog:checked~.bk-hamburger span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg)}
+.bk-footer{position:relative;background:var(--bk-navy-d);color:#9fb0c4;padding:50px 0 36px;text-align:center;overflow:hidden;margin-top:0}
+.bk-footer-sil{position:absolute;left:0;right:0;bottom:0;width:100%;opacity:.16;filter:brightness(1.7)}
+.bk-footer-wrap{position:relative;max-width:1200px;margin:0 auto;padding:0 28px}
+.bk-footer-logo{height:56px;width:auto;margin:0 auto 16px;display:block}
+.bk-footer-links{margin:8px 0 14px;display:flex;gap:22px;justify-content:center;flex-wrap:wrap;font-size:14px;font-weight:600}
+.bk-footer-links a{color:#9fb0c4;text-decoration:none}.bk-footer-links a:hover{color:var(--bk-gold2)}
+.bk-footer-social{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin:6px 0 4px}
+.bk-footer-social a{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:#cdd8e6;border:1px solid rgba(255,255,255,.18);padding:9px 17px;border-radius:30px;transition:.2s;text-decoration:none}
+.bk-footer-social a:hover{border-color:var(--bk-gold2);color:var(--bk-gold2)}
+.bk-footer-social svg{width:16px;height:16px;flex:none}
+.bk-footer-fine{font-size:12.5px;color:#69809a;margin-top:12px}
+.site-footer{display:none!important}
+.fab{position:fixed;right:18px;bottom:18px;z-index:80;width:56px;height:56px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(0,0,0,.28);text-decoration:none}
+.fab:hover{transform:scale(1.06)}
+.fab svg{width:30px;height:30px;fill:#fff}
+@media(max-width:700px){
+ .bk-menu{display:none;flex-direction:column;position:fixed;top:76px;left:0;right:0;background:rgba(246,234,203,.98);backdrop-filter:blur(10px);padding:20px 28px 28px;gap:18px;border-bottom:1px solid rgba(21,131,126,.2);z-index:59}
+ #navtog:checked~.bk-menu{display:flex}
+ .bk-hamburger{display:flex}
+ .bk-menu-order{display:inline-flex!important}
+ .bk-btn.bk-nav-order{display:none}
+}
+</style>
+
+</head>
   <body>
-    <header class="site-header" data-header>
-      <a class="brand" href="../index.html" aria-label="Mathurawala home">
-        <img src="../assets/brand-original-logo.png" alt="Mathurawala logo" />
-        <strong>mathurawala</strong>
-        <span>Mathura's living food</span>
-      </a>
-      <nav class="nav-links" aria-label="Primary navigation">
-        <a href="../index.html#food">Food</a>
-        <a href="./index.html">Braj Kitchen</a>
-        <a href="../story.html">Story</a>
-        <a href="../index.html#gifting">Gifting</a>
-        <a href="../franchise.html">Franchise</a>
-      </nav>
-      <a class="nav-cta" href="https://wa.me/919356326855?text=Hi%20Mathurawala%2C%20I%20want%20to%20order%20or%20ask%20about%20your%20food.">WhatsApp +91 93563 26855</a>
-    </header>
+    <header>
+ <div class="bk-nav">
+  <a class="bk-brand" href="../index.html" aria-label="Mathurawala home"><img loading="lazy" decoding="async" src="../assets/new/logo-clean.png" alt="Mathurawala" /></a>
+  <input type="checkbox" id="navtog" hidden>
+  <nav class="bk-menu">
+   <a href="../index.html#food">Food</a>
+   <a href="../menu.html">Menu</a>
+   <a href="../index.html#gifting">Gifting</a>
+   <a href="../gallery.html">Gallery</a>
+   <a href="../braj-kitchen/index.html" style="color:var(--bk-teal)">Braj Kitchen</a>
+   <a href="../index.html#franchise">Franchise</a>
+   <a href="../index.html#visit">Visit</a>
+   <a class="bk-btn bk-menu-order" href="https://wa.me/919356326855?text=Radhe%20Radhe%20Mathurawala%2C%20I%20want%20to%20order%20for%20pickup.">Order on WhatsApp</a>
+  </nav>
+  <a class="bk-btn bk-nav-order" href="https://wa.me/919356326855?text=Radhe%20Radhe%20Mathurawala%2C%20I%20want%20to%20order%20for%20pickup.">Order on WhatsApp</a>
+  <label for="navtog" class="bk-hamburger" aria-label="Open menu"><span></span><span></span><span></span></label>
+ </div>
+</header>
 
     <main class="hub-shell">
       <nav class="breadcrumbs" aria-label="Breadcrumb">
@@ -240,15 +287,21 @@
       </article>
     </main>
 
-    <footer class="site-footer">
-      <strong>mathurawala</strong>
-      <span>Bharat's original food. From Mathura's living kitchen.</span>
-      <div>
-        <a href="../index.html">Home</a>
-        <a href="../story.html">Story</a>
-        <a href="../franchise.html">Franchise</a>
-        <a href="tel:+919356326855">+91 93563 26855</a>
-      </div>
-    </footer>
+    <footer class="bk-footer">
+ <img loading="lazy" decoding="async" class="bk-footer-sil" src="../assets/new/temple-silhouette.png" alt="" aria-hidden="true" />
+ <div class="bk-footer-wrap">
+  <img loading="lazy" decoding="async" class="bk-footer-logo" src="../assets/new/logo-light.png" alt="Mathurawala" />
+  <div class="bk-footer-links">
+   <a href="../index.html">Home</a><a href="../menu.html">Menu</a><a href="../index.html#gifting">Gifting</a><a href="../gallery.html">Gallery</a><a href="../braj-kitchen/index.html">Braj Kitchen</a><a href="../index.html#franchise">Franchise</a><a href="../index.html#visit">Visit</a>
+  </div>
+  <div class="bk-footer-social">
+   <a href="https://www.instagram.com/mathurawalasweet/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg>Instagram</a>
+   <a href="https://www.zomato.com/pune/mathurawala-baner" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 11l8.5-1.5L20 11M5 11v8h14v-8M9 19v-5h6v5"/></svg>Zomato</a>
+   <a href="https://www.google.com/maps/search/?api=1&query=Mathurawala+Baner+Pune" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s7-6.5 7-12A7 7 0 0 0 5 10c0 5.5 7 12 7 12z"/><circle cx="12" cy="10" r="2.6"/></svg>Google reviews</a>
+  </div>
+  <div class="bk-footer-fine">Bharat's original food, from the world's oldest living kitchen.<br>Baner, Pune · Pure vegetarian · Made live, no preservatives · Radhe Radhe 🙏</div>
+ </div>
+</footer>
+
   </body>
 </html>
