@@ -56,6 +56,11 @@ h2{font-size:clamp(28px,4.4vw,46px);font-weight:800;line-height:1.08}
 .ebitda .big2{font-family:Fraunces;font-weight:900;font-size:36px;color:var(--gold2);line-height:1}
 .ebitda .t2{font-size:15px;color:#cdd7e3;font-weight:500}
 .rev-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:24px}
+.shots{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:22px;align-items:start}
+.shot{border-radius:14px;overflow:hidden;box-shadow:0 12px 30px rgba(20,37,60,.14);border:1px solid rgba(20,37,60,.08);background:#fff}
+.shot img{width:100%;display:block}
+.shots .cap3{grid-column:1/-1;font-size:12px;color:var(--muted);margin-top:2px}
+@media(max-width:720px){.shots{grid-template-columns:1fr}}
 .rev{background:#fff;border-radius:14px;padding:18px 20px;box-shadow:0 10px 26px rgba(20,37,60,.08)}
 .rev .rhead{display:flex;align-items:center;gap:11px}
 .rev .av2{width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:17px;flex:none}
@@ -169,11 +174,11 @@ ul{margin-top:14px;padding-left:20px}li{margin:7px 0;font-size:15.5px}.dark li,.
  <div class="topics"><div class="lbl3">What guests talk about most, in Google's own review tags</div>
   <span class="chip3">Kachori <b>72</b></span><span class="chip3">Chaat <b>36</b></span><span class="chip3">Samosa <b>34</b></span><span class="chip3">Pani Puri <b>29</b></span><span class="chip3">Bedmi Puri <b>15</b></span><span class="chip3">Jalebi <b>12</b></span><span class="chip3">Kachori Sabji <b>10</b></span><span class="chip3">Lassi <b>10</b></span><span class="chip3">Chole Bhature <b>10</b></span><span class="chip3">Ghewar <b>8</b></span>
  </div>
- <div class="rev-grid">
-  <div class="rev"><div class="rhead"><div class="av2" style="background:#7E57C2">D</div><div><div class="nm2">Durga Karapurkar</div><div class="meta2">Local Guide · 408 reviews · 4 months ago</div></div><div class="gicon">G</div></div><div class="st">★★★★★</div><div class="rq">"One of the best places that serves authentic food taste from the north. Right from chaat and kachoris to sweets."</div></div>
-  <div class="rev"><div class="rhead"><div class="av2" style="background:#00897B">S</div><div><div class="nm2">Saurabh Suratkar</div><div class="meta2">Local Guide · 4 months ago</div></div><div class="gicon">G</div></div><div class="st">★★★★★</div><div class="rq">"Absolutely loved Mathurawala. The Aloo Tikki Chaat was just fabulous, honestly the best I've ever eaten."</div></div>
-  <div class="rev"><div class="rhead"><div class="av2" style="background:#E8710A">A</div><div><div class="nm2">Akrati Gangwar</div><div class="meta2">Google review</div></div><div class="gicon">G</div></div><div class="st">★★★★★</div><div class="rq">"Was missing that Agra taste of chaat, glad I finally found it here. Things I don't think are available anywhere else in Pune."</div></div>
-  <div class="rev"><div class="rhead"><div class="av2" style="background:#C2185B">A</div><div><div class="nm2">Anushka Sharma</div><div class="meta2">Local Guide · 3 months ago</div></div><div class="gicon">G</div></div><div class="st">★★★★★</div><div class="rq">"If you're feeling homesick in Pune, this place is truly a blessing."</div></div>
+ <div class="shots">
+  <div class="shot"><img src="../assets/review-shekhar.jpg" alt="Google review by Shekhar Srivastava: a hidden gem, authentic Mathura food, 1500 km from home" loading="lazy" /></div>
+  <div class="shot"><img src="../assets/review-kushal.jpg" alt="Google review by Kushal Mamarde: the Sharma family monitors quality, their story is inspiring" loading="lazy" /></div>
+  <div class="shot"><img src="../assets/review-saurabh.jpg" alt="Google review by Saurabh Suratkar: the Aloo Tikki Chaat the best I've ever eaten, Rasmalai outstanding" loading="lazy" /></div>
+  <div class="cap3">Real, unedited Google reviews. Hundreds more at 4.2★.</div>
  </div>
  <p class="lead" style="margin-top:22px">Why they come, from the founder's daily counter conversations: <b>authenticity</b> (it is actually from Mathura) and <b>a taste they cannot get anywhere else</b>, our bhalla and aloo tikki, the specific chole, the lassi, peda and sooji paani puri. Kachori and bedai sabji are the identity flag-bearers. <b>4.2★ across 700+ reviews</b>, and they self-identify on the first bite.</p>
 </div></section>
