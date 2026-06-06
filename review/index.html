@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Mathurawala · Review Request Card (print)</title>
+<meta name="robots" content="noindex" />
+<link rel="icon" type="image/png" href="../assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,800;9..144,900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#F6EACB;--navy:#10243C;--teal:#15837E;--gold:#C98A1E;--ink:#16273C}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,system-ui,sans-serif;background:#f0f0f0;min-height:100vh;padding:32px 16px}
+h1,h2,.serif{font-family:Fraunces,Georgia,serif}
+.screen-note{background:#fff;border-left:4px solid var(--teal);padding:16px 20px;margin:0 auto 28px;max-width:800px;border-radius:0 8px 8px 0;font-size:15px;color:var(--ink)}
+.screen-note h2{font-size:18px;color:var(--navy);margin-bottom:6px}
+.screen-note p{margin-top:6px;font-size:14px;color:#444}
+.screen-note code{background:#f5f5f5;padding:2px 6px;border-radius:4px;font-size:13px}
+
+/* Card — A5 size, printable */
+.card-wrap{display:flex;gap:20px;flex-wrap:wrap;justify-content:center;max-width:900px;margin:0 auto}
+.card{width:148mm;min-height:100mm;background:var(--cream);border-radius:16px;padding:24px 22px;box-shadow:0 8px 24px rgba(0,0,0,.15);display:flex;flex-direction:column;align-items:center;text-align:center;page-break-inside:avoid}
+.card .logo{height:42px;margin-bottom:14px}
+.card .star-line{font-size:22px;letter-spacing:2px;margin-bottom:4px;color:var(--gold)}
+.card .headline{font-family:Fraunces,Georgia,serif;font-size:22px;font-weight:900;color:var(--navy);line-height:1.1;margin-bottom:8px}
+.card .sub{font-size:13px;color:#555;margin-bottom:18px;max-width:220px;line-height:1.5}
+.card .qr-box{width:110px;height:110px;border:2px dashed rgba(16,36,60,.3);border-radius:10px;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;font-size:11px;color:#888;flex-direction:column;gap:4px}
+.card .qr-box img{width:100%;height:100%;border-radius:8px;object-fit:contain}
+.card .url{font-size:11px;color:var(--teal);word-break:break-all;margin-top:2px;font-weight:600}
+.card .footer{margin-top:auto;padding-top:14px;font-size:11px;color:#888}
+.card .footer b{color:var(--navy)}
+.card .offer{background:var(--navy);color:#fff;border-radius:8px;padding:7px 14px;font-size:12px;font-weight:700;margin-top:10px;display:inline-block}
+
+/* Hindi card variant */
+.card.hindi .headline{font-size:20px}
+
+/* Bill slip strip — smaller, landscape */
+.strip{width:58mm;background:#fff;border:1px solid #ddd;border-radius:8px;padding:12px 10px;font-size:10px;text-align:center;box-shadow:0 2px 8px rgba(0,0,0,.08)}
+.strip .logo{height:28px;margin-bottom:6px}
+.strip .text{font-size:10px;color:#333;line-height:1.4;margin-bottom:8px}
+.strip .qr-sm{width:70px;height:70px;border:1.5px dashed #aaa;border-radius:6px;display:flex;align-items:center;justify-content:center;margin:0 auto 6px;font-size:9px;color:#aaa;flex-direction:column}
+.strip .qr-sm img{width:100%;height:100%;border-radius:4px;object-fit:contain}
+.strip .offer-sm{font-size:9.5px;color:var(--navy);font-weight:700}
+
+@media print{
+  body{background:white;padding:0}
+  .screen-note{display:none}
+  .card-wrap{margin:0;gap:10mm}
+  .card{box-shadow:none;border:1px solid #ddd}
+  .strip{box-shadow:none}
+}
+</style>
+</head>
+<body>
+
+<div class="screen-note">
+  <h2>Mathurawala — Review Velocity Cards (print this page)</h2>
+  <p><b>Before printing:</b> replace the QR placeholder below with the actual Google review QR code.<br>
+  Get your review link from: Google Business Profile → "Get more reviews" → copy the short link → generate QR at <code>qr.io</code> or <code>qrcode-monkey.com</code>. Save as <code>review-qr.png</code> and drop it in <code>website/assets/</code>. Then update the <code>&lt;img src&gt;</code> paths below and reprint.<br><br>
+  <b>Place the A5 cards:</b> one on each table + one at the billing counter. The bill strip goes inside the carry bag or printed on the back of the receipt.<br><br>
+  <b>Team ask:</b> at billing, say: <em>"Ek 2-line Google review do, hum ek free peda dete hain."</em> (or whichever incentive Ketan decides — peda / saunf / a free panipuri). This is the single cheapest walk-in lever available.</p>
+</div>
+
+<div class="card-wrap">
+
+  <!-- Card 1: English (table/counter card) -->
+  <div class="card">
+    <img src="../assets/new/logo-clean.png" alt="Mathurawala" class="logo">
+    <div class="star-line">★★★★★</div>
+    <div class="headline">Loved it?<br>Tell Google.</div>
+    <p class="sub">2 lines. 30 seconds. Your review helps people find asli food in Baner.</p>
+    <div class="qr-box">
+      <!-- REPLACE with <img src="../assets/review-qr.png" alt="Scan to review"> when QR is ready -->
+      <span style="font-size:28px">📷</span>
+      <span>QR here</span>
+    </div>
+    <div class="url">Scan to review us on Google</div>
+    <div class="offer">Free peda with every review 🙏</div>
+    <div class="footer"><b>Mathurawala</b> · Baner, Pune · @mathurawalaofficial</div>
+  </div>
+
+  <!-- Card 2: Hindi (Braj voice) -->
+  <div class="card hindi">
+    <img src="../assets/new/logo-clean.png" alt="Mathurawala" class="logo">
+    <div class="star-line">★★★★★</div>
+    <div class="headline">Acha laga?<br>Google ko bhi batao.</div>
+    <p class="sub">2 line likhein. 30 second lagenge. Aapka review aur logon ko Mathura ka swaad dhoondhne mein madad karta hai.</p>
+    <div class="qr-box">
+      <!-- REPLACE with <img src="../assets/review-qr.png"> -->
+      <span style="font-size:28px">📷</span>
+      <span>QR here</span>
+    </div>
+    <div class="url">Google review ke liye scan karein</div>
+    <div class="offer">Review ke baad ek free peda milega 🙏</div>
+    <div class="footer"><b>Mathurawala</b> · Baner, Pune · Radhe Radhe 🦚</div>
+  </div>
+
+  <!-- Bill strip -->
+  <div class="strip">
+    <img src="../assets/new/logo-clean.png" alt="Mathurawala" class="logo">
+    <p class="text">Pasand aaya?<br><b>Google review do,<br>free peda lo.</b></p>
+    <div class="qr-sm">
+      <!-- REPLACE with <img src="../assets/review-qr.png"> -->
+      <span>📷 QR</span>
+    </div>
+    <p class="offer-sm">Scan → Review → Peda 🙏</p>
+  </div>
+
+</div>
+
+<div style="text-align:center;margin-top:32px;font-size:13px;color:#888">
+  Print · Place · Ask · Collect reviews · Watch GBP ranking climb
+</div>
+
+</body>
+</html>
