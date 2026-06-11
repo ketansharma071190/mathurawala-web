@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+Disallow: /deck/
+Disallow: /raise/
+Disallow: /investors/
+Disallow: /content/
+Disallow: /shoot/
+Disallow: /shotlist/
+Disallow: /recipe/
+Disallow: /brand/
+Sitemap: https://mathurawalafoods.com/sitemap.xml
