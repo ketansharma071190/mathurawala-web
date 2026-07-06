@@ -393,7 +393,14 @@ footer .social svg{width:16px;height:16px;flex:none}
   <a class="btn btn-light" href="https://www.zomato.com/pune/mathurawala-baner">Order on Zomato</a>
  </div>
 </div>
-<div class="map"><iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Mathurawala%20Baner%20Pune&z=15&output=embed" title="Mathurawala on Google Maps"></iframe></div>
+<style>
+.mapf{width:100%;height:320px;border:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;cursor:pointer;background:radial-gradient(120% 120% at 30% 20%,#FBF3DF,#F6EACB);color:var(--navy);font-family:Inter,sans-serif}
+.mapf-pin{font-size:34px}
+.mapf b{font-family:Fraunces,serif;font-size:19px}
+.mapf-cta{font-size:13px;font-weight:700;letter-spacing:.04em;color:var(--teal);text-transform:uppercase;background:rgba(21,131,126,.1);border:1px solid rgba(21,131,126,.3);padding:6px 14px;border-radius:30px;margin-top:2px;transition:.2s}
+.mapf:hover .mapf-cta{background:var(--teal);color:#fff}
+</style>
+<div class="map"><button class="mapf" type="button" aria-label="Open Google Map for Mathurawala, Baner" onclick="var f=document.createElement('iframe');f.src='https://maps.google.com/maps?q=Mathurawala%20Baner%20Pune&z=15&output=embed';f.title='Mathurawala on Google Maps';f.referrerPolicy='no-referrer-when-downgrade';this.replaceWith(f);"><span class="mapf-pin">📍</span><b>Mathurawala · Baner, Pune</b><span class="mapf-cta">Tap to open the map</span></button></div>
 </div></section>
 
 <footer>
