@@ -1,0 +1,1 @@
+- 2026-07-03 14:20 | LEXICON RULE (Ketan): shuddh Hindi/Sanskrit vocabulary, no Urdu-origin words (lafz -> shabd). QR card fixed + re-hosted at the same URL; brand book amended (Lexicon Purity Rule).

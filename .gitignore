@@ -3,3 +3,8 @@ qa-*.png
 brand-audit/
 .DS_Store
 dish-audit.jpg
+assets/reels/
+assets/audio/
+_removed_media_backup_2026-07-06/
+*.bin
+brand-audit/drive_*
