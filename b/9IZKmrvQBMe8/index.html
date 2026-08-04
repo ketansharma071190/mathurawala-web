@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<title>Mathurawala — The Board</title>
+<style>
+  :root{
+    --ink:#0B2530; --surface:#123540; --surface2:#17414E; --line:#265465;
+    --cream:#F4E9CE; --dim:#BFCBCD; --faint:#89A0A6;
+    --gold:#C8961E; --gold2:#E0B44A;
+    --good:#5AA84A; --warn:#D9A93E; --bad:#C1553B;
+    --disp:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+    --ui:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--ink);color:var(--cream);font-family:var(--ui);font-size:15px;
+       line-height:1.5;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1120px;margin:0 auto;padding:18px 14px 70px;display:flex;flex-direction:column;gap:16px}
+  .num{font-variant-numeric:tabular-nums}
+
+  header{display:flex;flex-wrap:wrap;gap:12px;align-items:flex-end;justify-content:space-between}
+  .brand{font-family:var(--disp);font-size:25px}
+  .brand em{font-style:normal;color:var(--gold)}
+  .stamp{font-size:11px;color:var(--faint);letter-spacing:.09em;text-transform:uppercase}
+  .toggle{display:flex;gap:0;border:1px solid var(--line);border-radius:99px;overflow:hidden}
+  .toggle button{background:transparent;border:0;color:var(--faint);font:inherit;font-size:12px;
+    padding:7px 15px;cursor:pointer;letter-spacing:.04em}
+  .toggle button[aria-pressed="true"]{background:var(--gold);color:#0B2530;font-weight:600}
+  .toggle button:focus-visible{outline:2px solid var(--gold2);outline-offset:-2px}
+
+  .verdict{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--good);
+    border-radius:4px;padding:18px 20px;display:flex;flex-direction:column;gap:9px}
+  .verdict h1{font-family:var(--disp);font-weight:600;font-size:clamp(20px,4.2vw,27px);margin:0;
+    line-height:1.25;text-wrap:balance}
+  .verdict p{margin:0;color:var(--dim);max-width:64ch;font-size:14px}
+  .pill{display:inline-flex;gap:6px;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;
+    padding:3px 9px;border-radius:99px;width:fit-content;font-weight:700}
+  .pill.g{background:rgba(90,168,74,.18);color:var(--good)}
+  .pill.w{background:rgba(217,169,62,.2);color:var(--warn)}
+
+  .grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:4px;padding:15px 16px;
+    display:flex;flex-direction:column;gap:6px}
+  .k{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--faint)}
+  .v{font-family:var(--disp);font-size:29px;line-height:1}
+  .v small{font-size:14px;color:var(--faint);font-family:var(--ui)}
+  .sub{font-size:12px;color:var(--dim)}
+
+  section{background:var(--surface);border:1px solid var(--line);border-radius:4px;padding:17px}
+  section>h2{font-family:var(--disp);font-size:16.5px;margin:0 0 3px;font-weight:600}
+  section>.note{font-size:12px;color:var(--faint);margin:0 0 14px;max-width:68ch}
+
+  table{width:100%;border-collapse:collapse;font-size:13px}
+  th{text-align:left;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--faint);
+     font-weight:700;padding:0 8px 8px 0}
+  td{padding:8px 8px 8px 0;border-top:1px solid var(--line)}
+  td.r,th.r{text-align:right;padding-right:0}
+  .tw{overflow-x:auto}
+  tr.tot td{font-weight:700;border-top:2px solid var(--gold)}
+
+  .chart{position:relative;display:flex;align-items:flex-end;gap:2px;height:168px;padding-top:20px;overflow-x:auto}
+  .bar{flex:1 1 0;min-width:7px;border-radius:1px 1px 0 0;background:var(--good);opacity:.92;position:relative}
+  .bar.under{background:var(--bad)}
+  .bar:hover{opacity:1;outline:1px solid var(--cream)}
+  .be{position:absolute;left:0;right:0;border-top:1.5px dashed var(--gold);pointer-events:none}
+  .be span{position:absolute;right:0;top:-16px;font-size:10px;color:var(--gold);letter-spacing:.06em;
+    text-transform:uppercase;background:var(--surface);padding:0 5px}
+  .xlab{display:flex;justify-content:space-between;font-size:10.5px;color:var(--faint);margin-top:6px;
+    padding-top:6px;border-top:1px solid var(--line)}
+
+  .hbars{display:flex;flex-direction:column;gap:8px}
+  .hrow{display:grid;grid-template-columns:96px 1fr auto;gap:10px;align-items:center;font-size:12.5px}
+  .hrow .lab{color:var(--dim)}
+  .track{height:16px;background:var(--surface2);border-radius:2px;overflow:hidden}
+  .fill{height:100%;border-radius:2px}
+  .hrow .amt{font-weight:600;min-width:82px;text-align:right}
+
+  details{border-top:1px solid var(--line);padding-top:11px;margin-top:6px}
+  summary{cursor:pointer;font-size:12px;color:var(--gold);list-style:none}
+  summary::-webkit-details-marker{display:none}
+  summary::before{content:"+ ";font-weight:700}
+  details[open] summary::before{content:"− "}
+  details p{font-size:12.5px;color:var(--dim);margin:8px 0 0}
+  footer{font-size:11.5px;color:var(--faint);text-align:center;line-height:1.7}
+  .hide{display:none !important}
+  @media (prefers-reduced-motion:no-preference){
+    .bar{animation:rise .45s cubic-bezier(.2,.8,.3,1) backwards}
+    @keyframes rise{from{transform:scaleY(0);transform-origin:bottom}}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div>
+    <div class="brand">mathura<em>wala</em> · the board</div>
+    <div class="stamp" id="stamp">Shop 4, Balewadi Phata · Baner, Pune</div>
+  </div>
+  <div class="toggle" role="group" aria-label="View">
+    <button id="bFull" aria-pressed="true">Full board</button>
+    <button id="bFran" aria-pressed="false">Franchise view</button>
+  </div>
+</header>
+
+<div class="verdict">
+  <span class="pill g">Profitable · clearing backlog</span>
+  <h1>August is running at ₹39,561 a day. July made ₹74,422 and every rupee went to old dues.</h1>
+  <p>The P&amp;L and the bank statement only look like they disagree. July earned a real profit and the
+     account still closed at ₹6,192, because roughly ₹3L of the month's outgoings were large round
+     settlements to traders and lenders rather than running costs. That is a backlog being serviced,
+     not a business losing money — and a backlog has an end date.</p>
+</div>
+
+<div class="grid">
+  <div class="card"><span class="k">August so far</span><span class="v num" style="color:var(--good)">₹39,561<small>/day</small></span><span class="sub num">vs ₹25,390/day in July · +56%</span></div>
+  <div class="card"><span class="k">July EBITDA</span><span class="v num" style="color:var(--good)">+₹74,422</span><span class="sub">9.9% margin</span></div>
+  <div class="card"><span class="k">Breakeven</span><span class="v num">₹20,553<small>/day</small></span><span class="sub num">₹6.17L/month · July ran 1.22×</span></div>
+  <div class="card sens"><span class="k">Bank at 31 July</span><span class="v num" style="color:var(--warn)">₹6,192</span><span class="sub num">in ₹6.65L · out ₹6.69L</span></div>
+</div>
+
+<section>
+  <h2>Month on month</h2>
+  <p class="note">PetPooja only reports in two-month windows before June 2026, so anything earlier is
+     shown as a window and cannot honestly be split. August is month-to-date. The breakeven multiple applies <em>today’s</em> cost base to each period, so it answers “would that month pay for the shop we run now”, not what it cost at the time.</p>
+  <div class="tw"><table>
+    <thead><tr><th>Period</th><th class="r">Revenue</th><th class="r">Bills</th><th class="r">Avg bill</th><th class="r">Per day</th><th class="r">vs breakeven</th></tr></thead>
+    <tbody id="mom"></tbody>
+  </table></div>
+</section>
+
+<section>
+  <h2>Did each day pay for itself?</h2>
+  <p class="note">Every day against the ₹20,553 the shop must take to cover its own costs. Green cleared
+     it, red did not. <strong id="cleared"></strong></p>
+  <div class="chart" id="chart"></div>
+  <div class="xlab"><span>2 Jul</span><span>17 Jul</span><span>31 Jul</span></div>
+</section>
+
+<section>
+  <h2>The year so far</h2>
+  <p class="note">Revenue per period, with the figure on every bar. Aug–Sep is the proven festive peak —
+     and Rakhi, Janmashtami and Ganpati all land in the next six weeks.</p>
+  <div class="hbars" id="hist"></div>
+</section>
+
+<section class="sens">
+  <h2>Where the money came from</h2>
+  <p class="note">Banked in July. Aggregator figures are net of commission, which is why Zomato and
+     Swiggy land smaller here than their share of sales.</p>
+  <div class="hbars" id="inflow"></div>
+  <details><summary>Why the counter matters more than it looks</summary>
+    <p>The counter is three-fifths of banked money. Swiggy, after commission, is six percent.
+       Worth remembering the next time a platform asks for something.</p></details>
+</section>
+
+<section>
+  <h2>What it costs to open the doors</h2>
+  <p class="note">Every fixed line, confirmed rather than estimated.</p>
+  <div class="tw"><table>
+    <thead><tr><th>Line</th><th class="r">Monthly</th><th class="r">Share</th></tr></thead>
+    <tbody id="costs"></tbody>
+  </table></div>
+</section>
+
+<section class="sens">
+  <h2>Salaries</h2>
+  <p class="note">Eleven people, ₹1,89,000 a month. The register is moving from paper to the
+     Salary Payments group, so paid-dates, advances and pending amounts fill in from there.</p>
+  <div class="tw"><table>
+    <thead><tr><th>Person</th><th class="r">Monthly</th><th class="r">Status</th></tr></thead>
+    <tbody id="sal"></tbody>
+  </table></div>
+</section>
+
+<section class="sens">
+  <h2>What we owe</h2>
+  <p class="note">The number that decides when the backlog ends. Vendor bills arrive daily in their
+     WhatsApp groups; opening balances are being confirmed vendor by vendor.</p>
+  <div class="tw"><table>
+    <thead><tr><th>Vendor</th><th>Supplies</th><th class="r">Owed</th></tr></thead>
+    <tbody id="dues"></tbody>
+  </table></div>
+</section>
+
+<section>
+  <h2>What actually sells</h2>
+  <p class="note">Ninety days to 18 July. The top 20 items carry half the revenue; the other 235 split the rest.</p>
+  <div class="tw"><table>
+    <thead><tr><th>Item</th><th class="r">90-day revenue</th><th class="r">Share</th></tr></thead>
+    <tbody id="menu"></tbody>
+  </table></div>
+</section>
+
+<section id="franSec">
+  <h2>The unit, as a model</h2>
+  <p class="note">One outlet, stripped to the numbers a second one would inherit.</p>
+  <div class="tw"><table>
+    <thead><tr><th>Measure</th><th class="r">This outlet</th></tr></thead>
+    <tbody id="fran"></tbody>
+  </table></div>
+  <details><summary>What a second outlet changes</summary>
+    <p>Rent and salaries repeat. The brand, recipes, costing, supplier rates and this board do not —
+       they are already built and carry across at no extra cost. That is the difference between
+       opening a second shop and starting a second business.</p></details>
+</section>
+
+<section class="sens" style="border-left:4px solid var(--warn)">
+  <h2>Known gaps, stated plainly</h2>
+  <p class="note" style="color:var(--dim)">
+    <strong>Missed bills.</strong> Card and UPI are both keyed as “Card”, and PetPooja has recorded UPI
+    as zero for three years. Paytm banked ₹3,97,820 in July; the gap between that and what PetPooja
+    billed is sales taken with no bill punched. One payment-mix export sizes it exactly.<br><br>
+    <strong>Vendor opening balances</strong> are being confirmed vendor by vendor.<br><br>
+    <strong>Salary history</strong> starts from the new Salary Payments group; anything before that
+    lives on the paper register.</p>
+</section>
+
+<footer>
+  Built from PetPooja, the Kotak current account, the daily cash book and the vendor groups.<br>
+  <span id="built"></span>
+</footer>
+</div>
+
+<script>
+const INR=n=>"₹"+Math.round(n).toLocaleString("en-IN");
+const BE=20553;
+
+const DAILY=[["2026-07-02",10944],["2026-07-04",24825],["2026-07-05",26739],["2026-07-06",14566],["2026-07-07",19156],["2026-07-08",15135],["2026-07-09",26116],["2026-07-10",24387],["2026-07-11",31477],["2026-07-12",42972],["2026-07-13",18817],["2026-07-14",19048],["2026-07-15",21461],["2026-07-16",39645],["2026-07-17",22649],["2026-07-18",40714],["2026-07-19",37438],["2026-07-20",20435],["2026-07-21",12571],["2026-07-22",21442],["2026-07-23",20551],["2026-07-24",26591],["2026-07-25",32363],["2026-07-26",35958],["2026-07-27",25126],["2026-07-28",24407],["2026-07-29",28925],["2026-07-30",27564],["2026-07-31",24301]];
+const c=document.getElementById("chart"), mx=Math.max(...DAILY.map(d=>d[1]))*1.06;
+let cl=0;
+DAILY.forEach(([d,v],i)=>{const b=document.createElement("div");
+  b.className="bar"+(v<BE?" under":""); if(v>=BE)cl++;
+  b.style.height=(v/mx*100)+"%"; b.style.animationDelay=(i*13)+"ms";
+  b.title=new Date(d).toLocaleDateString("en-IN",{day:"numeric",month:"short"})+" — "+INR(v);
+  c.appendChild(b);});
+const be=document.createElement("div"); be.className="be";
+be.style.bottom=(BE/mx*(c.clientHeight-20))+"px";
+be.innerHTML='<span>breakeven '+INR(BE)+'</span>'; c.appendChild(be);
+document.getElementById("cleared").textContent=cl+" of "+DAILY.length+" July days cleared it.";
+
+const MOM=[["Jun–Jul 2025",1231414,7492,61],["Aug–Sep 2025 (festive peak)",1647138,9113,61],
+  ["Oct–Nov 2025",961166,5167,61],["Dec 25–Jan 26",1378094,8939,62],["Feb–Mar 2026",1506904,8300,59],
+  ["Apr–May 2026",1618774,8162,61],["June 2026",667758,3590,30],["July 2026",755315,3718,31],
+  ["August 2026 · to date",118683,506,3]];
+document.getElementById("mom").innerHTML=MOM.map(([n,r,b,d])=>{
+  const pd=r/d, ratio=pd/BE, col=ratio>=1?"var(--good)":"var(--bad)";
+  return '<tr><td>'+n+'</td><td class="r num">'+INR(r)+'</td><td class="r num">'+b.toLocaleString("en-IN")+
+    '</td><td class="r num">'+INR(r/b)+'</td><td class="r num">'+INR(pd)+
+    '</td><td class="r num" style="color:'+col+';font-weight:600">'+ratio.toFixed(2)+'×</td></tr>';}).join("");
+
+const HIST=[["Jan–Feb 25",624746],["Mar 25",394541],["Apr–May 25",676636],["Jun–Jul 25",1231414],
+ ["Aug–Sep 25",1647138],["Oct–Nov 25",961166],["Dec–Jan 26",1378094],["Feb–Mar 26",1506904],
+ ["Apr–May 26",1618774],["Jun 26",667758],["Jul 26",755315],["Aug 26 MTD",118683]];
+const hm=Math.max(...HIST.map(h=>h[1]));
+document.getElementById("hist").innerHTML=HIST.map(([n,v])=>
+ '<div class="hrow"><span class="lab">'+n+'</span><div class="track"><div class="fill" style="width:'+
+ (v/hm*100)+'%;background:'+(n.startsWith("Aug–Sep")?"var(--gold)":"var(--surface2)")+
+ ';border:1px solid '+(n.startsWith("Aug–Sep")?"var(--gold)":"var(--line)")+
+ '"></div></div><span class="amt num">'+INR(v)+'</span></div>').join("");
+
+const IN=[["Counter — card & UPI (Paytm)",397820,"var(--gold)"],["Zomato, net of commission",169175,"var(--good)"],
+ ["Other credits",56992,"var(--faint)"],["Swiggy, net of commission",40767,"var(--warn)"]];
+const it=IN.reduce((a,b)=>a+b[1],0);
+document.getElementById("inflow").innerHTML=IN.map(([n,v,col])=>
+ '<div class="hrow"><span class="lab">'+n.split("—")[0].split(",")[0]+'</span><div class="track"><div class="fill" style="width:'+
+ (v/it*100)+'%;background:'+col+'"></div></div><span class="amt num">'+INR(v)+' <span class="sub">'+
+ (v/it*100).toFixed(1)+'%</span></span></div>').join("");
+
+const COST=[["Salaries — 11 people",189000],["Rent — ₹15,000 bank + ₹45,640 cash",60640],["Electricity",30000],
+ ["The Digital Pillar",19999],["Zomato ads",16000],["Repairs & ad-hoc",5000],["Drinking water",4000],
+ ["Miscellaneous",3000],["Garbage pickup",1500],["Airtel landline",943],["Internet",700]];
+const ct=COST.reduce((a,b)=>a+b[1],0);
+document.getElementById("costs").innerHTML=COST.map(([n,v])=>
+ '<tr><td>'+n+'</td><td class="r num">'+INR(v)+'</td><td class="r num sub">'+(v/ct*100).toFixed(1)+
+ '%</td></tr>').join("")+'<tr class="tot"><td>Total fixed</td><td class="r num">'+INR(ct)+
+ '</td><td class="r sub">per month</td></tr>';
+
+const SAL=[["Soham",34000],["Lokesh",20000],["Bijay",18000],["Aman Singh",17000],["Vikas",16000],
+ ["Ashwini",15000],["Chota Govind",15000],["Mohit",14000],["Lallan",14000],["Puneet",13000],["Abhishek",13000]];
+document.getElementById("sal").innerHTML=SAL.map(([n,v])=>
+ '<tr><td>'+n+'</td><td class="r num">'+INR(v)+'</td><td class="r sub">syncing</td></tr>').join("")+
+ '<tr class="tot"><td>11 people</td><td class="r num">'+INR(SAL.reduce((a,b)=>a+b[1],0))+
+ '</td><td class="r sub">per month</td></tr>';
+
+const DUES=[["Jagdamba Traders","Kirana / grocery",154000],["Dairy","Milk, mawa",null],
+ ["Sabji vendor","Vegetables",null],["Sagar Shinde","LPG",null],["Papuram Parmar","Disposables",null],
+ ["K Joshi Press","Packaging",null]];
+document.getElementById("dues").innerHTML=DUES.map(([n,s,v])=>
+ '<tr><td>'+n+'</td><td class="sub">'+s+'</td><td class="r num">'+
+ (v?INR(v):'<span class="sub">confirming</span>')+'</td></tr>').join("");
+
+const MENU=[["Chole Bhature",180000],["Aloo Samosa · 5,985 units, 3.4× anything else",153000],["Kachori Sabji",97000]];
+document.getElementById("menu").innerHTML=MENU.map(([n,v])=>
+ '<tr><td>'+n+'</td><td class="r num">'+INR(v)+'</td><td class="r num sub">'+(v/2146000*100).toFixed(1)+
+ '%</td></tr>').join("")+'<tr class="tot"><td>Top 10 items</td><td class="r num">38% of revenue</td>'+
+ '<td class="r sub">top 20 = 51%</td></tr>';
+
+const FRAN=[["Revenue, July 2026",INR(755315)],["Bills per month","3,718"],["Average bill",INR(203)],
+ ["Gross margin","54%"],["Fixed cost base",INR(330782)+" / month"],["Breakeven",INR(BE)+" / day"],
+ ["EBITDA margin","9.9%"],["Counter share of banked revenue","59.8%"],
+ ["Revenue concentration","Top 20 items = 51%"],["Menu items costed","91% of units sold"]];
+document.getElementById("fran").innerHTML=FRAN.map(([a,b])=>
+ '<tr><td>'+a+'</td><td class="r num">'+b+'</td></tr>').join("");
+
+const t=new Date();
+document.getElementById("built").textContent="Rebuilt "+t.toLocaleString("en-IN",{dateStyle:"medium",timeStyle:"short"});
+document.getElementById("stamp").textContent="Shop 4, Balewadi Phata · Baner, Pune · updated "+
+  t.toLocaleDateString("en-IN",{day:"numeric",month:"short",year:"numeric"});
+
+const bF=document.getElementById("bFull"), bR=document.getElementById("bFran");
+function setView(fran){
+  document.querySelectorAll(".sens").forEach(e=>e.classList.toggle("hide",fran));
+  bF.setAttribute("aria-pressed",String(!fran)); bR.setAttribute("aria-pressed",String(fran));
+}
+bF.onclick=()=>setView(false); bR.onclick=()=>setView(true);
+</script>
+</body>
+</html>
