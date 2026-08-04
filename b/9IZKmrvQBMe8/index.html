@@ -105,19 +105,25 @@
   </div>
 </header>
 
-<div class="verdict">
-  <span class="pill g">Profitable · clearing backlog</span>
-  <h1>August is running at ₹39,561 a day. July made ₹74,422 and every rupee went to old dues.</h1>
-  <p>The P&amp;L and the bank statement only look like they disagree. July earned a real profit and the
-     account still closed at ₹6,192, because roughly ₹3L of the month's outgoings were large round
-     settlements to traders and lenders rather than running costs. That is a backlog being serviced,
-     not a business losing money — and a backlog has an end date.</p>
+<div class="verdict" style="border-left-color:var(--warn)">
+  <span class="pill w">Correction · 4 Aug · numbers under revision</span>
+  <h1>The shop is sitting on breakeven, not on ₹74,422 of profit. A Zomato rupee is worth 43 paise of a counter rupee, and the old model counted them as the same rupee.</h1>
+  <p><strong>What was wrong:</strong> the earlier P&amp;L applied one blended commission to one blended
+     revenue pool. Measured properly, per dish and per channel, the counter returns
+     <strong>67.4&thinsp;% contribution</strong> and delivery returns <strong>28.8&thinsp;%</strong> —
+     after real commission, Zomato ads, and the container we pay for but only recover 57&thinsp;% of.
+     Contribution is about <strong>₹3.30L a month against a ₹3.31L fixed base</strong>. That is zero,
+     which is exactly why no money can be drawn and why vendor dues keep growing: the shortfall is
+     being funded on vendor credit.</p>
+  <p style="color:var(--warn)"><strong>Do not share this link yet.</strong> The Franchise-view button
+     is a convenience, not a wall — anyone can press Full board and see payroll. A separate
+     franchise-only URL with the sensitive rows never written into the page is being built.</p>
 </div>
 
 <div class="grid">
   <div class="card"><span class="k">August so far</span><span class="v num" style="color:var(--good)">₹39,561<small>/day</small></span><span class="sub num">vs ₹25,390/day in July · +56%</span></div>
-  <div class="card"><span class="k">July EBITDA</span><span class="v num" style="color:var(--good)">+₹74,422</span><span class="sub">9.9% margin</span></div>
-  <div class="card"><span class="k">Breakeven</span><span class="v num">₹20,553<small>/day</small></span><span class="sub num">₹6.17L/month · July ran 1.22×</span></div>
+  <div class="card"><span class="k">Contribution — counter</span><span class="v num" style="color:var(--good)">67.4<small>%</small></span><span class="sub num">measured across 100 dine-in lines</span></div>
+  <div class="card"><span class="k">Contribution — delivery</span><span class="v num" style="color:var(--bad)">28.8<small>%</small></span><span class="sub num">49% of revenue, 29% of contribution</span></div>
   <div class="card sens"><span class="k">Bank at 31 July</span><span class="v num" style="color:var(--warn)">₹6,192</span><span class="sub num">in ₹6.65L · out ₹6.69L</span></div>
 </div>
 
@@ -133,7 +139,7 @@
 
 <section>
   <h2>Did each day pay for itself?</h2>
-  <p class="note">Every day against the ₹20,553 the shop must take to cover its own costs. Green cleared
+  <p class="note">Every day against the ₹21,696 the shop must take to cover its own costs at <em>today’s</em> channel mix. Breakeven is not one number: at 100% counter it is ₹16,144/day, at 70% delivery it is ₹26,941. Every point of mix that moves to delivery pushes it up about ₹150/day. Green cleared
      it, red did not. <strong id="cleared"></strong></p>
   <div class="chart" id="chart"></div>
   <div class="xlab"><span>2 Jul</span><span>17 Jul</span><span>31 Jul</span></div>
@@ -226,7 +232,7 @@
 
 <script>
 const INR=n=>"₹"+Math.round(n).toLocaleString("en-IN");
-const BE=20553;
+const BE=21696;   // mix-aware: 44.7% online, dine CM 67.4%, online CM 28.8%
 
 const DAILY=[["2026-07-02",10944],["2026-07-04",24825],["2026-07-05",26739],["2026-07-06",14566],["2026-07-07",19156],["2026-07-08",15135],["2026-07-09",26116],["2026-07-10",24387],["2026-07-11",31477],["2026-07-12",42972],["2026-07-13",18817],["2026-07-14",19048],["2026-07-15",21461],["2026-07-16",39645],["2026-07-17",22649],["2026-07-18",40714],["2026-07-19",37438],["2026-07-20",20435],["2026-07-21",12571],["2026-07-22",21442],["2026-07-23",20551],["2026-07-24",26591],["2026-07-25",32363],["2026-07-26",35958],["2026-07-27",25126],["2026-07-28",24407],["2026-07-29",28925],["2026-07-30",27564],["2026-07-31",24301]];
 const c=document.getElementById("chart"), mx=Math.max(...DAILY.map(d=>d[1]))*1.06;
@@ -242,7 +248,7 @@ be.innerHTML='<span>breakeven '+INR(BE)+'</span>'; c.appendChild(be);
 document.getElementById("cleared").textContent=cl+" of "+DAILY.length+" July days cleared it.";
 
 const MOM=[["Jun–Jul 2025",1231414,7492,61],["Aug–Sep 2025 (festive peak)",1647138,9113,61],
-  ["Oct–Nov 2025",961166,5167,61],["Dec 25–Jan 26",1378094,8939,62],["Feb–Mar 2026",1506904,8300,59],
+  ["Oct–Nov 2025 · outlet shut for renovation",961166,5167,61],["Dec 25–Jan 26",1378094,8939,62],["Feb–Mar 2026",1506904,8300,59],
   ["Apr–May 2026",1618774,8162,61],["June 2026",667758,3590,30],["July 2026",755315,3718,31],
   ["August 2026 · to date",118683,506,3]];
 document.getElementById("mom").innerHTML=MOM.map(([n,r,b,d])=>{
@@ -252,7 +258,7 @@ document.getElementById("mom").innerHTML=MOM.map(([n,r,b,d])=>{
     '</td><td class="r num" style="color:'+col+';font-weight:600">'+ratio.toFixed(2)+'×</td></tr>';}).join("");
 
 const HIST=[["Jan–Feb 25",624746],["Mar 25",394541],["Apr–May 25",676636],["Jun–Jul 25",1231414],
- ["Aug–Sep 25",1647138],["Oct–Nov 25",961166],["Dec–Jan 26",1378094],["Feb–Mar 26",1506904],
+ ["Aug–Sep 25",1647138],["Oct–Nov 25 · renovation",961166],["Dec–Jan 26",1378094],["Feb–Mar 26",1506904],
  ["Apr–May 26",1618774],["Jun 26",667758],["Jul 26",755315],["Aug 26 MTD",118683]];
 const hm=Math.max(...HIST.map(h=>h[1]));
 document.getElementById("hist").innerHTML=HIST.map(([n,v])=>
