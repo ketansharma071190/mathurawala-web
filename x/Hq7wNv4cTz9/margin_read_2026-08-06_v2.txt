@@ -1,0 +1,167 @@
+
+========================================================================================================
+MATHURAWALA, PER ITEM MARGIN BY CHANNEL     90 days to 18 Jul 2026     110 items matched
+========================================================================================================
+Total contribution across matched items  Rs 857,609   (286,498/month)
+Recipe cost = ingredients + dressing. Gas and packaging are OUT, both are handled below the line.
+Zomato nets 51.8% of the online price (65.76% gross-to-net, less 13.97% ads).
+Swiggy nets 59.3%. Counter nets 95.2% (menu price is GST inclusive).
+========================================================================================================
+1. THE VOLUME AND MARGIN GRID, online items only (this is where the money leaks)
+--------------------------------------------------------------------------------------------------------
+median Zomato contribution margin across these 34 items: 33%
+
+ITEM                                    ONL QTY   PRICE    COST  ZOM CM%  SWG CM%  Rs/UNIT    90d Rs
+Aloo Samosa                               2,334      35     5.4      36%      44%     13.4    31,194
+Mathura Ki Special Kachori Sabji          1,296      54     9.3      35%      42%     19.6    25,435
+Mathura Ki Special Bedai Sabji              686      54     6.1      40%      48%     22.8    15,631
+Kachori                                     640      30     8.6      23%      31%      7.4     4,755  <<
+Chole Bhature [2 Bhature]                   632     189    33.2      34%      42%     67.9    42,927
+Aloo Pyaz Samosa [1 Samosa]                 530      41     5.4      39%      46%     16.6     8,782
+Jodhpur Special Pyaz Kachori                437      45     8.7      32%      40%     15.4     6,725  <<
+Masala Poori Sabji [4 Pieces]               341     141    11.1      44%      52%     64.4    21,965
+Jalebi Desi Ghee (100 Grams)                290      80    16.9      31%      38%     25.9     7,516  <<
+Bedai                                       289      30     5.5      34%      41%     10.6     3,060
+Chole Kulche (2 Pc)                         210     189    48.5      26%      34%     52.7    11,068  <<
+Rabdi Jalebi (200 Grams)                    175     162    38.4      28%      36%     48.2     8,444
+Chole Samosa Chaat                          159      70    18.4      26%      33%     19.1     3,034
+Bhalla (chole Tikki)                        131     119    21.3      34%      41%     42.4     5,552
+Special Kesar Rabdi - 100grams              112      84    21.4      26%      34%     23.6     2,646
+Matar Kulche (2 Pc)                         111     185    44.7      28%      35%     54.2     6,022
+Dahi Bhalla Papdi                           106     129    21.3      35%      43%     47.7     5,059
+Kesar Rasmalai (100 Grams)                   94     110    21.3      32%      40%     37.5     3,525
+Dahi Wada / Dahi Bhalla                      91     119    23.5      32%      40%     40.2     3,656
+Aloo Pyaz Sabji Samosa                       86      50     6.0      40%      47%     20.8     1,784
+Kulhad Lassi (250 Ml)                        84      97    17.9      33%      41%     34.0     2,854
+Kala Jamun (1pc)                             82      55    12.2      30%      37%     17.2     1,412
+Aloo Paratha                                 80     129    17.1      38%      46%     51.9     4,154
+Dahi Samosa Chaat                            78     112    14.2      39%      47%     45.7     3,564
+
+  << = high volume AND below the median margin. These are the ones to reprice first.
+========================================================================================================
+2. IS THE ONLINE MARKUP ENOUGH? (the structural question)
+--------------------------------------------------------------------------------------------------------
+  To bank the same rupee online as at the counter, the markup must be 95.2/51.8 - 1 = 84% on Zomato,
+  and 95.2/59.3 - 1 = 61% on Swiggy. Anything below that earns LESS online than at the counter.
+
+  48 of 49 priced items are marked up less than the 84% Zomato breakeven markup.
+
+ITEM                                     DINE  ONLINE  MARKUP  DINE CM  ZOM CM    LOST  ONL QTY
+Chole Samosa Chaat                         70      70      0%      72%     26%    -65%      159
+Special Kesar Rabdi - 100grams             80      84      5%      72%     26%    -63%      112
+Rabdi Jalebi (200 Grams)                  140     162     16%      71%     28%    -61%      175
+Spl Kesar Rabdi (250 Gms)                 200     232     16%      72%     29%    -60%       40
+Jalebi Desi Ghee (250 Gms)                150     175     17%      70%     28%    -61%       78
+Jalebi Desi Ghee (500 Gms)                300     350     17%      70%     28%    -61%       20
+Plain Paratha                              40      49     22%      75%     32%    -57%       15
+Matar Kulche (2 Pc)                       150     185     23%      69%     28%    -60%      111
+Kadhi Pakoda Rice/Kadhi Chawal            129     159     23%      82%     38%    -54%        0
+Paneer Paratha                            129     159     23%      77%     34%    -56%       20
+Dal Khichdi                               129     159     23%      68%     27%    -60%        0
+1 Plain Paratha + Dal Fry + Rice          129     159     23%      92%     46%    -50%        7
+Dal Fry Rice/Dal Fry Chawal               129     159     23%      72%     30%    -58%        0
+Aloo Pyaz Sabji Samosa                     40      50     25%      84%     40%    -53%       86
+Chole                                     119     149     25%      81%     37%    -54%       17
+Plain Rice                                 79      99     25%      78%     35%    -55%        0
+Chole Bhature [2 Bhature]                 150     189     26%      77%     34%    -55%      632
+Chole Kulche (2 Pc)                       150     189     26%      66%     26%    -60%      210
+========================================================================================================
+3. THIN OR LOSING ON A PLATFORM
+--------------------------------------------------------------------------------------------------------
+ITEM                                    ONL QTY   PRICE    COST  ZOM/unit  SWG/unit  ZOM CM
+Bread Pakoda                                 65      45    16.1       7.2      10.6     16%
+Mathura Ka Peda (250 Gms)                    36     242    74.9      50.6      68.9     21%
+Kachori                                     640      30     8.6       6.9       9.2     23%
+Raj Kachori                                  31     129    36.7      30.1      39.8     23%
+
+  Outright loss-making on Zomato before packaging: 1 items, Thandai (250 Ml)
+========================================================================================================
+4. THE FOUR CORNERS, all channels combined
+--------------------------------------------------------------------------------------------------------
+
+  HIGH VOLUME, HIGH EARN  (30 items, Rs 653,207 of 90-day contribution)   protect these, they are the business
+      Aloo Samosa                                qty   5,985   Rs    98,518   dine  77%  zom  36%
+      Chole Bhature [2 Bhature]                  qty   1,077   Rs    91,712   dine  77%  zom  34%
+      Bhalla (chole Tikki)                       qty     893   Rs    50,998   dine  74%  zom  34%
+      Mathura Ki Special Kachori Sabji           qty   2,400   Rs    49,370   dine  70%  zom  35%
+      Masala Poori Sabji [4 Pieces]              qty     527   Rs    38,510   dine  89%  zom  44%
+      Mathura Ki Special Bedai Sabji             qty   1,437   Rs    34,286   dine  80%  zom  40%
+      Kulhad Lassi (250 Ml)                      qty     625   Rs    29,255   dine  73%  zom  33%
+
+  HIGH VOLUME, LOW EARN  (7 items, Rs 25,908 of 90-day contribution)   reprice, these are working the kitchen for little
+      Dahi Kachori Chaat                         qty     103   Rs     4,504   dine  76%  zom   0%
+      Masala Chaas (Full)                        qty     124   Rs     4,323   dine  81%  zom   0%
+      Mirchi Bada [2pcs]                         qty     261   Rs     3,975   dine  40%  zom  26%
+      Dahi Wada / Dahi Bhalla                    qty      91   Rs     3,656   dine   0%  zom  32%
+      Kesar Rasmalai (100 Grams)                 qty      94   Rs     3,525   dine  68%  zom  32%
+      Aloo Pyaz Sabji Samosa                     qty     140   Rs     3,517   dine  84%  zom  40%
+      Butter Roti/chapati                        qty     124   Rs     2,408   dine  82%  zom   0%
+
+  LOW VOLUME, HIGH EARN  (7 items, Rs 63,228 of 90-day contribution)   promote, the margin is already there
+      Malpua (Desi Ghee)                         qty      21   Rs    13,711   dine  98%  zom   0%
+      Mathura Ka Peda                            qty      32   Rs    11,763   dine  55%  zom   0%
+      Jalebi Desi Ghee                           qty      21   Rs    11,544   dine  97%  zom   0%
+      Rabdi Jalebi                               qty      90   Rs     8,547   dine  71%  zom   0%
+      Kadhi Pakoda Rice/Kadhi Chawal             qty      71   Rs     7,143   dine  82%  zom  38%
+      Dahi Bhalla                                qty      86   Rs     5,349   dine  73%  zom   0%
+      Paneer Paratha                             qty      63   Rs     5,171   dine  77%  zom  34%
+
+  LOW VOLUME, LOW EARN  (30 items, Rs 66,146 of 90-day contribution)   candidates to simplify off the menu
+      Moong Dal Halwa (100 Gms)                  qty      66   Rs     4,630   dine  81%  zom   0%
+      Jalebi Desi Ghee (250 Gms)                 qty      78   Rs     4,000   dine  70%  zom  28%
+      Sooji Spdp 5 Pcs                           qty      68   Rs     3,691   dine  71%  zom   0%
+      Kala Jamun (250 Gms)                       qty      28   Rs     3,569   dine   0%  zom  47%
+      Sooji Dahi  Poori - 5 Pcs                  qty      72   Rs     3,462   dine  72%  zom   0%
+      Rajma Rice/Rajma Chawal                    qty      32   Rs     3,225   dine  71%  zom   0%
+      Kesar Rasmalai (250 Gms)                   qty      45   Rs     3,163   dine  68%  zom  29%
+========================================================================================================
+5. CHANNEL GAPS
+--------------------------------------------------------------------------------------------------------
+
+  Sells well at the counter, ZERO online (8 items). Either not listed, or listed and never ordered:
+      Rasmalai - 100 Gms                         dine qty    279   dine CM  72%   Rs   15,303
+      Pyaz Pakora                                dine qty    418   dine CM  88%   Rs   12,201
+      Mix Pakora                                 dine qty    398   dine CM  92%   Rs   12,135
+      Dahi Papri Chaat                           dine qty    104   dine CM  71%   Rs    6,338
+      Dahi Kachori Chaat                         dine qty    103   dine CM  76%   Rs    4,504
+      Masala Chaas (Full)                        dine qty    124   dine CM  81%   Rs    4,323
+      Mirchi Bada [2pcs]                         dine qty    261   dine CM  40%   Rs    3,975
+      Butter Roti/chapati                        dine qty    124   dine CM  82%   Rs    2,408
+
+  Online only, no counter sales (7 items):
+      Rabdi Jalebi (200 Grams)                   onl qty    175   zom CM  28%   Rs    8,444
+      Jalebi Desi Ghee (250 Gms)                 onl qty     78   zom CM  28%   Rs    4,000
+      Dahi Wada / Dahi Bhalla                    onl qty     91   zom CM  32%   Rs    3,656
+      Kesar Rasmalai (100 Grams)                 onl qty     94   zom CM  32%   Rs    3,525
+      Kesar Rasmalai (250 Gms)                   onl qty     45   zom CM  29%   Rs    3,163
+      Spl Kesar Rabdi (250 Gms)                  onl qty     40   zom CM  29%   Rs    2,830
+      Mathura Ka Peda (250 Gms)                  onl qty     36   zom CM  21%   Rs    1,974
+========================================================================================================
+6. BY CATEGORY
+--------------------------------------------------------------------------------------------------------
+CATEGORY                    ITEMS     UNITS   90d CONTRIB   Rs/UNIT   SHARE
+Chole Wala                      4     2,117       165,543      78.2   19.3%
+Mithai                         17     2,203       135,881      61.7   15.8%
+Chaat Wala                     13     2,449       123,730      50.5   14.4%
+Samosa Wala                     4     7,096       121,061      17.1   14.1%
+Kachori Wala                    6     6,645       118,083      17.8   13.8%
+Lassi                           4       831        37,985      45.7    4.4%
+Parathe                         7       526        34,265      65.1    4.0%
+Pakora                          3     1,077        28,311      26.3    3.3%
+Rice                            6       205        18,759      91.5    2.2%
+Poori Wala                      4       226        10,693      47.3    1.2%
+Snacks                          1       419         6,631      15.8    0.8%
+Halwa                           1        66         4,630      70.2    0.5%
+Roti                            1       124         2,408      19.4    0.3%
+Chai                            1        38           453      11.9    0.1%
+Doodh                           2        48            56       1.2    0.0%
+========================================================================================================
+NEEDS YOUR EYE, not a bug, a question
+--------------------------------------------------------------------------------------------------------
+  Pyaz Pakora                                dine      35  online      89  markup +154% looks like a portion or pack mismatch, confirm before acting
+  Mix Pakora                                 dine      35  online      89  markup +154% looks like a portion or pack mismatch, confirm before acting
+  Mirchi Bada [2pcs]                         dine      40  online      89  markup +122% looks like a portion or pack mismatch, confirm before acting
+  Dahi (1kg)                                 dine     190  online     490  markup +157% looks like a portion or pack mismatch, confirm before acting
+========================================================================================================
+wrote the 'Margin by Channel' tab into Mathurawala_Costing_Master.xlsx  (110 rows)
+red = Zomato contribution under 15%.  amber = under 25%.
