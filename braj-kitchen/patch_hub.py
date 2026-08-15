@@ -69,9 +69,9 @@ NEW_HEADER = """<header>
    <a href="../braj-kitchen/index.html" style="color:var(--bk-teal)">Braj Kitchen</a>
    <a href="../index.html#franchise">Franchise</a>
    <a href="../index.html#visit">Visit</a>
-   <a class="bk-btn bk-menu-order" href="https://wa.me/919356326855?text=Radhe%20Radhe%20Mathurawala%2C%20I%20want%20to%20order%20for%20pickup.">Order on WhatsApp</a>
+   <a class="bk-btn bk-menu-order" href="https://wa.me/919322134970?text=Radhe%20Radhe%20Mathurawala%2C%20I%20want%20to%20order%20for%20pickup.">Order on WhatsApp</a>
   </nav>
-  <a class="bk-btn bk-nav-order" href="https://wa.me/919356326855?text=Radhe%20Radhe%20Mathurawala%2C%20I%20want%20to%20order%20for%20pickup.">Order on WhatsApp</a>
+  <a class="bk-btn bk-nav-order" href="https://wa.me/919322134970?text=Radhe%20Radhe%20Mathurawala%2C%20I%20want%20to%20order%20for%20pickup.">Order on WhatsApp</a>
   <label for="navtog" class="bk-hamburger" aria-label="Open menu"><span></span><span></span><span></span></label>
  </div>
 </header>"""
@@ -92,7 +92,7 @@ NEW_FOOTER = """<footer class="bk-footer">
  </div>
 </footer>
 
-<a class="fab" href="https://wa.me/919356326855?text=Radhe%20Radhe%2C%20I%20want%20to%20order%20for%20pickup." aria-label="Order on WhatsApp" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20zm4.6-5.9c-.25-.13-1.5-.74-1.7-.82-.23-.08-.4-.13-.56.13-.17.25-.64.82-.79.99-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2-1.24-.74-.66-1.24-1.47-1.39-1.72-.14-.25-.02-.39.11-.51.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.13-.56-1.35-.77-1.85-.2-.48-.4-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.5-.61 1.71-1.21.21-.59.21-1.1.15-1.21-.06-.11-.23-.17-.48-.3z"/></svg></a>"""
+<a class="fab" href="https://wa.me/919322134970?text=Radhe%20Radhe%2C%20I%20want%20to%20order%20for%20pickup." aria-label="Order on WhatsApp" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20zm4.6-5.9c-.25-.13-1.5-.74-1.7-.82-.23-.08-.4-.13-.56.13-.17.25-.64.82-.79.99-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2-1.24-.74-.66-1.24-1.47-1.39-1.72-.14-.25-.02-.39.11-.51.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.13-.56-1.35-.77-1.85-.2-.48-.4-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.5-.61 1.71-1.21.21-.59.21-1.1.15-1.21-.06-.11-.23-.17-.48-.3z"/></svg></a>"""
 
 
 def patch(filename):
