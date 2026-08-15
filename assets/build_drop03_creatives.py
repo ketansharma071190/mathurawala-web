@@ -222,7 +222,7 @@ if __name__ == "__main__":
         kicker="Gifting · Mathura Peda",
         headline="Jo gift mein original ho",
         subline="Khoya se bana Mathura Peda. Rs 700/kg. Har tayohar, har puja, har shuruaat.",
-        footer_note="Order on WhatsApp: +91 93563 26855",
+        footer_note="Order on WhatsApp: +91 93221 34970",
         tint_alpha=155,
     ), "peda-gifting")
 
